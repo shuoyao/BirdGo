@@ -1,4 +1,4 @@
-# bird
+# San Francisco Bay Bird observatory
 This is the group repo for cs169 group 25.
 
 Collaborator:
