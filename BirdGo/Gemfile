@@ -36,6 +36,7 @@ gem 'jquery-rails'
 gem 'haml'
 
 gem 'rubygems-bundler'
+gem 'rake'
 
 # Use unicorn as the web server
 # gem 'unicorn'

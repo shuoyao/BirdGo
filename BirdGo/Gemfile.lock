@@ -196,6 +196,7 @@ DEPENDENCIES
   launchy
   pg
   rails (= 4.2.6)
+  rake
   rspec-rails (= 3.4.2)
   rubygems-bundler
   sass-rails (~> 5.0.3)
