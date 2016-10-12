@@ -1,10 +1,10 @@
 language: ruby
 rvm:
- - 2.2.0
+ - 2.1.0
  - jruby
  - rbx-2
 before_install:
  - rvm install ruby -v 2.2.0p0
- - rbenv install --binary
+ #- rvm install binary
 # uncomment and edit the following line if your project needs to run something other than `rake`:
 # script: bundle exec rspec spec
