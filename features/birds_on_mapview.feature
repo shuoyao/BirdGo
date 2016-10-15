@@ -16,11 +16,11 @@ Background: Birds have been added to database
 Scenario: See birds in the certain area
   When I set the map at location "36.778259, -119.417931"
   Then I should see "wigeon"
-  Then I should not see "duck"
+  And I should not see "duck"
    
 Scenario: Move map and see updated birds in the area
   When I move map to "39.124578, -132.346678"
   Then I should not see "wigeon"
-  Then I should see "duck"
+  And I should see "duck"
 
     
