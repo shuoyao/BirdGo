@@ -43,3 +43,6 @@ gem 'rake', '>=11.3.0'
 
 # Deploy with Capistrano
 # gem 'capistrano'
+
+# enable CodeClimate test coverage
+gem "codeclimate-test-reporter", group: :test, require: nil
