@@ -10,7 +10,10 @@ Xiaoyang Bai, Gefei Han, Mingjian Lu, Gongjian Wang, Chonghui Wu, Shuo Yao
 Link to Pivotal Tracker: https://www.pivotaltracker.com/n/projects/1887963
 
 
-<a href="https://codeclimate.com/github/rails/rails"><img src="https://codeclimate.com/github/rails/rails/badges/gpa.svg" /></a>
-<a href="https://codeclimate.com/github/rails/rails/coverage"><img src="https://codeclimate.com/github/rails/rails/badges/coverage.svg" /></a>
-<a href="https://codeclimate.com/github/rails/rails"><img src="https://codeclimate.com/github/rails/rails/badges/issue_count.svg" /></a>
 <a href="https://travis-ci.org/shuoyao/BirdGo"><img src="https://travis-ci.org/shuoyao/BirdGo.svg?branch=master" /></a>
+
+
+<a href="https://codeclimate.com/github/shuoyao/BirdGo"><img src="https://codeclimate.com/github/shuoyao/BirdGo/badges/gpa.svg" /></a>
+
+<a href="https://codeclimate.com/github/shuoyao/BirdGo/coverage"><img src="https://codeclimate.com/github/shuoyao/BirdGo/badges/coverage.svg" /></a>
+

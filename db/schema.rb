@@ -11,6 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20161019024825) do
+
+  create_table "birds", force: :cascade do |t|
+    t.string   "name"
+    t.float    "locationX"
+    t.float    "locationY"
+    t.string   "wiki_link"
+    t.datetime "last_seen"
+    t.integer  "frequency"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "user_name"
+    t.string   "password"
+    t.string   "e_mails"
+    t.integer  "zip_code"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
