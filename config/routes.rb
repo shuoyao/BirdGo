@@ -47,7 +47,11 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  root :to => redirect('/login')
-  get '/login' => 'login#view'
-  post '/login' => 'login#login'
+  
+  devise_for :users, controllers: {
+        sessions: 'users/sessions',
+        registrations: 'users/registrations'
+  }
+  
+  root :to => redirect('/users/sign_in')
 end

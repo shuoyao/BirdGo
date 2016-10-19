@@ -6,13 +6,13 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '290316d908bbe8ccdcbc928883bbf7f956c40bd48c14d38acbc77444ede5542e103a0183d055379ec3f5045e38a09cd86a30e2348eb4d13864589e0d2d1d49be'
+  config.secret_key = '290316d908bbe8ccdcbc928883bbf7f956c40bd38c14d39acbc77444ede5542e103a0183d055379ec3f5045e38a09cd86a30e2348eb4d13864589e0d2d1d49be'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  config.mailer_sender = 'birdgo169@gmail.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -154,7 +154,7 @@ Devise.setup do |config|
 
   # ==> Configuration for :validatable
   # Range for password length.
-  config.password_length = 6..128
+  config.password_length = 6..20
 
   # Email regex used to validate email formats. It simply asserts that
   # one (and only one) @ exists in the given string. This is mainly

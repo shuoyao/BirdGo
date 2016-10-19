@@ -5,6 +5,8 @@ gem 'rails', '4.2.6'
 
 # This is for login system - Mingjian
 gem 'devise'
+gem 'turbolinks'
+gem 'bourbon'
 gem 'bootstrap-sass'
 
 # Bundle edge Rails instead:
