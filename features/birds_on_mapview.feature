@@ -6,9 +6,9 @@ Feature: see birds on map view
   
 Background: Birds have been added to database
    Given the following birds exist:
-    | location               | name  | 
-    | 36.778259, -119.417931 | wigeon|
-    | 39.124578, -132.346678 | duck  |
+    | locationX |   locationY | name  | 
+    | 36.778259 | -119.417931 | wigeon|
+    | 39.124578 | -132.346678 | duck  |
     
     And I am on the Birdgo map page
 

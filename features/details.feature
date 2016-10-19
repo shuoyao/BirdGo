@@ -3,9 +3,9 @@ Feature: User want to see details of a bird pinned
   
 Background: Birds have been added to database
    Given the following birds exist:
-    | location               | name  | frequency(over past week) | wiki-link
-    | 36.778259, -119.417931 | wigeon| 10                        | https://en.wikipedia.org/wiki/Wigeon
-    | 39.124578, -132.346678 | duck  | 2                         | https://en.wikipedia.org/wiki/Duck
+    | locationX |  locationY | name  | frequency                 | wiki-link
+    | 36.778259 |-119.417931 | wigeon| 10                        | https://en.wikipedia.org/wiki/Wigeon
+    | 39.124578 |-132.346678 | duck  | 2                         | https://en.wikipedia.org/wiki/Duck
     And I am on the Birdgo map page
 
 Scenario: See birds on the certain area
