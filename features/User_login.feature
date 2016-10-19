@@ -2,10 +2,10 @@ Feature: User_login
   As a User
   I Should be able to login after I signed up.
   Background:
-    Given this user is in the database
-  | User_name               | password | Level |
-  | Kitahara                | 123456789| Admin |
-  | The Terminator          | Bernie   | Guest |
+    Given the following users exist:
+  | user_name               | password |
+  | Kitahara                | 123456789|
+  | The Terminator          | Bernie   |
 
   Scenario: Successfully login in
     Given I am on the login page
