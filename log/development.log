@@ -288,3 +288,108 @@ Started GET "/assets/main.self-b680fd2efc5d90b1830f8678fcaea33dc1877e5c57348ad1b
 
 
 Started GET "/assets/login_page/login_page.self-dec3f2e5e9651bed97b6e248ffc06d538829e75198b7fde0d5ba73965a2cd1fb.js?body=1" for 136.152.142.108 at 2016-10-19 04:36:42 +0000
+
+
+Started GET "/" for 136.152.142.116 at 2016-10-19 04:57:13 +0000
+
+
+Started GET "/login" for 136.152.142.116 at 2016-10-19 04:57:14 +0000
+Processing by LoginController#view as HTML
+  Rendered login/login_page.html.haml within layouts/application (13.4ms)
+Completed 200 OK in 634ms (Views: 609.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login_page/login_page.self-b680fd2efc5d90b1830f8678fcaea33dc1877e5c57348ad1b673d068453eda15.css?body=1" for 136.152.142.116 at 2016-10-19 04:57:15 +0000
+
+
+Started GET "/assets/main.self-b680fd2efc5d90b1830f8678fcaea33dc1877e5c57348ad1b673d068453eda15.css?body=1" for 136.152.142.116 at 2016-10-19 04:57:15 +0000
+
+
+Started GET "/assets/application.self-dae5c5da7223ce739ad497817a3df9ba2fa2840da302653b11558b4f7d98bfc3.css?body=1" for 136.152.142.116 at 2016-10-19 04:57:15 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 136.152.142.116 at 2016-10-19 04:57:15 +0000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 136.152.142.116 at 2016-10-19 04:57:15 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 136.152.142.116 at 2016-10-19 04:57:15 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 136.152.142.116 at 2016-10-19 04:57:15 +0000
+
+
+Started GET "/assets/login_page/login_page.self-dec3f2e5e9651bed97b6e248ffc06d538829e75198b7fde0d5ba73965a2cd1fb.js?body=1" for 136.152.142.116 at 2016-10-19 04:57:15 +0000
+
+
+Started GET "/" for 136.152.142.116 at 2016-10-19 05:11:43 +0000
+
+
+Started GET "/login" for 136.152.142.116 at 2016-10-19 05:11:43 +0000
+Processing by LoginController#view as HTML
+  Rendered login/login_page.html.haml within layouts/application (21.3ms)
+Completed 200 OK in 3009ms (Views: 2987.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login_page/login_page.self-19b69e77d1db8afac751f90018440ceee9510b2c5e99795f4a07cafac549920f.css?body=1" for 136.152.142.116 at 2016-10-19 05:11:46 +0000
+
+
+Started GET "/assets/main.self-60293a3b6b4180cdc3263d352e9556e323d48d3782effb895f0160418d668e4e.css?body=1" for 136.152.142.116 at 2016-10-19 05:11:46 +0000
+
+
+Started GET "/assets/login_page/login_page.self-c6807773375bede06657a86efb1d33d04c679fdfc0ef774e800bdf6c6a9db6a3.js?body=1" for 136.152.142.116 at 2016-10-19 05:11:47 +0000
+
+
+Started GET "/login" for 136.152.142.116 at 2016-10-19 05:13:17 +0000
+Processing by LoginController#view as HTML
+  Rendered login/login_page.html.haml within layouts/application (25.3ms)
+Completed 200 OK in 596ms (Views: 575.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login_page/login_page.self-19b69e77d1db8afac751f90018440ceee9510b2c5e99795f4a07cafac549920f.css?body=1" for 136.152.142.116 at 2016-10-19 05:13:18 +0000
+
+
+Started GET "/assets/main.self-60293a3b6b4180cdc3263d352e9556e323d48d3782effb895f0160418d668e4e.css?body=1" for 136.152.142.116 at 2016-10-19 05:13:18 +0000
+
+
+Started GET "/assets/application.self-dae5c5da7223ce739ad497817a3df9ba2fa2840da302653b11558b4f7d98bfc3.css?body=1" for 136.152.142.116 at 2016-10-19 05:13:18 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 136.152.142.116 at 2016-10-19 05:13:18 +0000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 136.152.142.116 at 2016-10-19 05:13:18 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 136.152.142.116 at 2016-10-19 05:13:18 +0000
+
+
+Started GET "/assets/login_page/login_page.self-c6807773375bede06657a86efb1d33d04c679fdfc0ef774e800bdf6c6a9db6a3.js?body=1" for 136.152.142.116 at 2016-10-19 05:13:18 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 136.152.142.116 at 2016-10-19 05:13:19 +0000
+
+
+Started GET "/login" for 136.152.142.116 at 2016-10-19 05:22:51 +0000
+Processing by LoginController#view as HTML
+  Rendered login/login_page.html.haml within layouts/application (23.3ms)
+Completed 200 OK in 692ms (Views: 659.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login_page/login_page.self-18ec0f1ddb3123a818a278b4fe2518e2fa56aab6cbc5336623d84ece7e6b240e.css?body=1" for 136.152.142.116 at 2016-10-19 05:22:53 +0000
+
+
+Started GET "/login" for 136.152.142.116 at 2016-10-19 05:23:30 +0000
+Processing by LoginController#view as HTML
+  Rendered login/login_page.html.haml within layouts/application (36.7ms)
+Completed 200 OK in 991ms (Views: 960.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 136.152.142.116 at 2016-10-19 05:23:32 +0000
+Processing by LoginController#view as HTML
+  Rendered login/login_page.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 113ms (Views: 112.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login_page/login_page.self-4e93ebf1edd334c2a2bf171d50ad70374f05498496aee6c934f8e37fc3f10317.css?body=1" for 136.152.142.116 at 2016-10-19 05:23:32 +0000
