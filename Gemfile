@@ -38,6 +38,8 @@ gem 'haml'
 gem 'rubygems-bundler'
 gem 'rake', '>=11.3.0'
 
+gem 'turbolinks'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

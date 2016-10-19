@@ -1,0 +1,6 @@
+-#  This file is app/views/explore/index.html.haml
+%h1 Find a Bird
+
+= form_tag explores_path, :method => :get do
+  = text_field :explore, 'search'
+  = submit_tag 'Search'

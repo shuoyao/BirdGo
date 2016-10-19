@@ -1,0 +1,9 @@
+I"•(function() {
+  $(document).ready(function() {
+    return $('#search').keypress(function() {
+      return alert("hi");
+    });
+  });
+
+}).call(this);
+:ET

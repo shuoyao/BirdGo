@@ -530,3 +530,92 @@
   [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
   [1m[35m (0.1ms)[0m  begin transaction
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "birds" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Im so Cool"], ["created_at", "2016-10-19 03:48:36.936629"], ["updated_at", "2016-10-19 03:48:36.936629"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "birds" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Im cooler"], ["created_at", "2016-10-19 03:48:36.943252"], ["updated_at", "2016-10-19 03:48:36.943252"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "birds" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Coolest"], ["created_at", "2016-10-19 03:48:36.946106"], ["updated_at", "2016-10-19 03:48:36.946106"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "birds" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Zeus"], ["created_at", "2016-10-19 03:48:36.947345"], ["updated_at", "2016-10-19 03:48:36.947345"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("user_name", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_name", "Kitahara"], ["password", "123456789"], ["created_at", "2016-10-19 03:48:36.971283"], ["updated_at", "2016-10-19 03:48:36.971283"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("user_name", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_name", "The Terminator"], ["password", "Bernie"], ["created_at", "2016-10-19 03:48:36.973591"], ["updated_at", "2016-10-19 03:48:36.973591"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("user_name", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_name", "Kitahara"], ["password", "123456789"], ["created_at", "2016-10-19 03:48:36.987033"], ["updated_at", "2016-10-19 03:48:36.987033"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("user_name", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_name", "The Terminator"], ["password", "Bernie"], ["created_at", "2016-10-19 03:48:36.988957"], ["updated_at", "2016-10-19 03:48:36.988957"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["locationX", 36.778259], ["locationY", -119.417931], ["name", "wigeon"], ["created_at", "2016-10-19 03:48:37.001411"], ["updated_at", "2016-10-19 03:48:37.001411"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["locationX", 39.124578], ["locationY", -132.346678], ["name", "duck"], ["created_at", "2016-10-19 03:48:37.003641"], ["updated_at", "2016-10-19 03:48:37.003641"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["locationX", 36.778259], ["locationY", -119.417931], ["name", "wigeon"], ["created_at", "2016-10-19 03:48:37.015469"], ["updated_at", "2016-10-19 03:48:37.015469"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["locationX", 39.124578], ["locationY", -132.346678], ["name", "duck"], ["created_at", "2016-10-19 03:48:37.017688"], ["updated_at", "2016-10-19 03:48:37.017688"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "frequency", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["locationX", 36.778259], ["locationY", -119.417931], ["name", "wigeon"], ["frequency", 10], ["created_at", "2016-10-19 03:48:37.028371"], ["updated_at", "2016-10-19 03:48:37.028371"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "birds" ("locationX", "locationY", "name", "frequency", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["locationX", 39.124578], ["locationY", -132.346678], ["name", "duck"], ["frequency", 2], ["created_at", "2016-10-19 03:48:37.030408"], ["updated_at", "2016-10-19 03:48:37.030408"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "frequency", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["locationX", 36.778259], ["locationY", -119.417931], ["name", "wigeon"], ["frequency", 10], ["created_at", "2016-10-19 03:48:37.043874"], ["updated_at", "2016-10-19 03:48:37.043874"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "birds" ("locationX", "locationY", "name", "frequency", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["locationX", 39.124578], ["locationY", -132.346678], ["name", "duck"], ["frequency", 2], ["created_at", "2016-10-19 03:48:37.046753"], ["updated_at", "2016-10-19 03:48:37.046753"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m

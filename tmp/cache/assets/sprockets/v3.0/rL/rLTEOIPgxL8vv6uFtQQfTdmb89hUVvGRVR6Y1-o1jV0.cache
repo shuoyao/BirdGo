@@ -1,0 +1,9 @@
+I"ž(function() {
+  $(document).ready(function() {
+    return $('#explore[search]').keypress(function() {
+      return alert("hi");
+    });
+  });
+
+}).call(this);
+:ET
