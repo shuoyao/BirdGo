@@ -2,6 +2,7 @@ class DetailController < ApplicationController
   
     def display
         @birds = Bird.where(id = params[:id]).first
+        @name = @birds.name
         @locationX = @birds.locationX
         @locationY = @birds.locationY
         @wiki_link = @birds.wiki_link
