@@ -19,5 +19,5 @@ Scenario: search for a bird
   And  I fill the textfield with "Im so cool"
   And  I can see dropdown hint with an entry of "Im so Cool" in it
   And  I press "Im so Cool"
-  And  I am on the a pin place where "Im so Cool" is shown 
+  And  I am on the a pin place where "Im so Cool" is shown
 

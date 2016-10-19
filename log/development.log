@@ -1,0 +1,290 @@
+
+
+Started GET "/" for 136.152.142.108 at 2016-10-19 03:50:39 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.2.0/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (6.8ms)
+Completed 200 OK in 40ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 136.152.142.108 at 2016-10-19 03:51:32 +0000
+
+
+Started GET "/login" for 136.152.142.108 at 2016-10-19 03:51:33 +0000
+Processing by LoginController#view as HTML
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template login/login_page, application/login_page with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :haml]}. Searched in:
+  * "/home/ubuntu/workspace/Project/BirdGo/app/views"
+  * "/usr/local/rvm/gems/ruby-2.2.0/gems/devise-4.2.0/app/views"
+):
+  app/controllers/login_controller.rb:3:in `view'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (19.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (21.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (141.3ms)
+
+
+Started GET "/" for 136.152.142.108 at 2016-10-19 03:53:02 +0000
+
+
+Started GET "/login" for 136.152.142.108 at 2016-10-19 03:53:02 +0000
+Processing by LoginController#view as HTML
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template login/login_page.html, application/login_page.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :haml]}. Searched in:
+  * "/home/ubuntu/workspace/Project/BirdGo/app/views"
+  * "/usr/local/rvm/gems/ruby-2.2.0/gems/devise-4.2.0/app/views"
+):
+  app/controllers/login_controller.rb:3:in `view'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (19.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (16.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (136.4ms)
+
+
+Started GET "/" for 136.152.142.108 at 2016-10-19 03:53:43 +0000
+
+
+Started GET "/login" for 136.152.142.108 at 2016-10-19 03:53:43 +0000
+Processing by LoginController#view as HTML
+  Rendered login/login_page.html.haml within layouts/application (8.6ms)
+Completed 500 Internal Server Error in 464ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (File to import not found or unreadable: bourbon.
+Load paths:
+  /home/ubuntu/workspace/Project/BirdGo/app/assets/images
+  /home/ubuntu/workspace/Project/BirdGo/app/assets/javascripts
+  /home/ubuntu/workspace/Project/BirdGo/app/assets/stylesheets
+  /home/ubuntu/workspace/Project/BirdGo/vendor/assets/javascripts
+  /home/ubuntu/workspace/Project/BirdGo/vendor/assets/stylesheets
+  /usr/local/rvm/gems/ruby-2.2.0/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.2.0/gems/coffee-rails-4.1.1/lib/assets/javascripts):
+    2: <html>
+    3: <head>
+    4:   <title>BirdGo</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/login_page/login_page.scss:1
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__749772622851597914_32311220'
+  app/controllers/login_controller.rb:3:in `view'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (22.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (24.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (145.4ms)
+
+
+Started GET "/" for 136.152.142.108 at 2016-10-19 03:55:01 +0000
+
+
+Started GET "/login" for 136.152.142.108 at 2016-10-19 03:55:01 +0000
+Processing by LoginController#view as HTML
+  Rendered login/login_page.html.haml within layouts/application (26.2ms)
+Completed 500 Internal Server Error in 3156ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (couldn't find file 'turbolinks' with type 'application/javascript'
+Checked in these paths: 
+  /home/ubuntu/workspace/Project/BirdGo/app/assets/images
+  /home/ubuntu/workspace/Project/BirdGo/app/assets/javascripts
+  /home/ubuntu/workspace/Project/BirdGo/app/assets/stylesheets
+  /home/ubuntu/workspace/Project/BirdGo/vendor/assets/javascripts
+  /home/ubuntu/workspace/Project/BirdGo/vendor/assets/stylesheets
+  /usr/local/rvm/gems/ruby-2.2.0/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.2.0/gems/coffee-rails-4.1.1/lib/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.2.0/gems/bourbon-4.2.7/app/assets/stylesheets):
+    2: <html>
+    3: <head>
+    4:   <title>BirdGo</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/javascripts/application.js:15
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___2652210017793749717_21790340'
+  app/controllers/login_controller.rb:3:in `view'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (30.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (24.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (155.0ms)
+
+
+Started GET "/" for 136.152.142.108 at 2016-10-19 03:56:43 +0000
+
+
+Started GET "/login" for 136.152.142.108 at 2016-10-19 03:56:44 +0000
+Processing by LoginController#view as HTML
+  Rendered login/login_page.html.haml within layouts/application (12.0ms)
+Completed 500 Internal Server Error in 1424ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (couldn't find file 'turbolinks' with type 'application/javascript'
+Checked in these paths: 
+  /home/ubuntu/workspace/Project/BirdGo/app/assets/images
+  /home/ubuntu/workspace/Project/BirdGo/app/assets/javascripts
+  /home/ubuntu/workspace/Project/BirdGo/app/assets/stylesheets
+  /home/ubuntu/workspace/Project/BirdGo/vendor/assets/javascripts
+  /home/ubuntu/workspace/Project/BirdGo/vendor/assets/stylesheets
+  /usr/local/rvm/gems/ruby-2.2.0/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.2.0/gems/coffee-rails-4.1.1/lib/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.2.0/gems/bourbon-4.2.7/app/assets/stylesheets):
+    2: <html>
+    3: <head>
+    4:   <title>BirdGo</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/javascripts/application.js:15
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__2925751923835812968_30605440'
+  app/controllers/login_controller.rb:3:in `view'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (36.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (26.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (145.4ms)
+
+
+Started GET "/" for 136.152.142.108 at 2016-10-19 03:58:00 +0000
+
+
+Started GET "/login" for 136.152.142.108 at 2016-10-19 03:58:01 +0000
+Processing by LoginController#view as HTML
+  Rendered login/login_page.html.haml within layouts/application (12.4ms)
+Completed 500 Internal Server Error in 582ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (couldn't find file 'turbolinks' with type 'application/javascript'
+Checked in these paths: 
+  /home/ubuntu/workspace/Project/BirdGo/app/assets/images
+  /home/ubuntu/workspace/Project/BirdGo/app/assets/javascripts
+  /home/ubuntu/workspace/Project/BirdGo/app/assets/stylesheets
+  /home/ubuntu/workspace/Project/BirdGo/vendor/assets/javascripts
+  /home/ubuntu/workspace/Project/BirdGo/vendor/assets/stylesheets
+  /usr/local/rvm/gems/ruby-2.2.0/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.2.0/gems/coffee-rails-4.1.1/lib/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.2.0/gems/bourbon-4.2.7/app/assets/stylesheets):
+    2: <html>
+    3: <head>
+    4:   <title>BirdGo</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/javascripts/application.js:15
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__4551589540754119274_27557020'
+  app/controllers/login_controller.rb:3:in `view'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (21.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (23.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (132.0ms)
+
+
+Started GET "/" for 136.152.142.108 at 2016-10-19 03:58:58 +0000
+
+
+Started GET "/login" for 136.152.142.108 at 2016-10-19 03:58:59 +0000
+Processing by LoginController#view as HTML
+  Rendered login/login_page.html.haml within layouts/application (19.0ms)
+Completed 200 OK in 2467ms (Views: 2446.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login_page/login_page.self-08ebe66f8dfa2594ef22d60bb3b0156341dfdd5893c8ee866d7417e04885fff5.css?body=1" for 136.152.142.108 at 2016-10-19 03:59:01 +0000
+
+
+Started GET "/assets/main.self-08ebe66f8dfa2594ef22d60bb3b0156341dfdd5893c8ee866d7417e04885fff5.css?body=1" for 136.152.142.108 at 2016-10-19 03:59:01 +0000
+
+
+Started GET "/assets/application.self-dae5c5da7223ce739ad497817a3df9ba2fa2840da302653b11558b4f7d98bfc3.css?body=1" for 136.152.142.108 at 2016-10-19 03:59:01 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 136.152.142.108 at 2016-10-19 03:59:01 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 136.152.142.108 at 2016-10-19 03:59:01 +0000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 136.152.142.108 at 2016-10-19 03:59:01 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 136.152.142.108 at 2016-10-19 03:59:01 +0000
+
+
+Started GET "/" for 136.152.142.108 at 2016-10-19 04:02:38 +0000
+
+
+Started GET "/login" for 136.152.142.108 at 2016-10-19 04:02:39 +0000
+Processing by LoginController#view as HTML
+  Rendered login/login_page.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 559ms (Views: 536.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/put" for 136.152.142.108 at 2016-10-19 04:02:45 +0000
+
+ActionController::RoutingError (No route matches [GET] "/put"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (22.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (157.3ms)
+
+
+Started GET "/" for 136.152.142.108 at 2016-10-19 04:14:18 +0000
+
+
+Started GET "/login" for 136.152.142.108 at 2016-10-19 04:14:19 +0000
+Processing by LoginController#view as HTML
+  Rendered login/login_page.html.haml within layouts/application (18.4ms)
+Completed 200 OK in 638ms (Views: 616.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 136.152.142.108 at 2016-10-19 04:36:41 +0000
+
+
+Started GET "/login" for 136.152.142.108 at 2016-10-19 04:36:41 +0000
+Processing by LoginController#view as HTML
+  Rendered login/login_page.html.haml within layouts/application (11.1ms)
+Completed 200 OK in 843ms (Views: 824.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login_page/login_page.self-b680fd2efc5d90b1830f8678fcaea33dc1877e5c57348ad1b673d068453eda15.css?body=1" for 136.152.142.108 at 2016-10-19 04:36:42 +0000
+
+
+Started GET "/assets/main.self-b680fd2efc5d90b1830f8678fcaea33dc1877e5c57348ad1b673d068453eda15.css?body=1" for 136.152.142.108 at 2016-10-19 04:36:42 +0000
+
+
+Started GET "/assets/login_page/login_page.self-dec3f2e5e9651bed97b6e248ffc06d538829e75198b7fde0d5ba73965a2cd1fb.js?body=1" for 136.152.142.108 at 2016-10-19 04:36:42 +0000
