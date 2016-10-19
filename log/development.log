@@ -393,3 +393,27 @@ Completed 200 OK in 113ms (Views: 112.1ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/assets/login_page/login_page.self-4e93ebf1edd334c2a2bf171d50ad70374f05498496aee6c934f8e37fc3f10317.css?body=1" for 136.152.142.116 at 2016-10-19 05:23:32 +0000
+
+
+Started GET "/" for 136.152.142.108 at 2016-10-19 05:34:23 +0000
+
+
+Started GET "/login" for 136.152.142.108 at 2016-10-19 05:34:24 +0000
+Processing by LoginController#view as HTML
+  Rendered login/login_page.html.haml within layouts/application (46.7ms)
+Completed 200 OK in 908ms (Views: 877.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.self-60293a3b6b4180cdc3263d352e9556e323d48d3782effb895f0160418d668e4e.css?body=1" for 136.152.142.108 at 2016-10-19 05:34:25 +0000
+
+
+Started GET "/assets/login_page/login_page.self-4e93ebf1edd334c2a2bf171d50ad70374f05498496aee6c934f8e37fc3f10317.css?body=1" for 136.152.142.108 at 2016-10-19 05:34:25 +0000
+
+
+Started GET "/assets/login_page/login_page.self-c6807773375bede06657a86efb1d33d04c679fdfc0ef774e800bdf6c6a9db6a3.js?body=1" for 136.152.142.108 at 2016-10-19 05:34:25 +0000
+
+
+Started GET "/login" for 136.152.142.108 at 2016-10-19 05:36:03 +0000
+Processing by LoginController#view as HTML
+  Rendered login/login_page.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 50ms (Views: 49.1ms | ActiveRecord: 0.0ms)
