@@ -269,3 +269,706 @@ Started GET "/assets/explore.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 136.152.142.116 at 2016-10-19 06:55:36 +0000
+
+
+Started GET "/" for 136.152.142.63 at 2016-10-19 07:00:20 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 136.152.142.63 at 2016-10-19 07:00:20 +0000
+Processing by ExploreController#view as HTML
+  Rendered explore/explore.html.haml within layouts/application (8.4ms)
+Completed 200 OK in 375ms (Views: 360.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 136.152.142.63 at 2016-10-19 07:00:21 +0000
+
+
+Started GET "/" for 136.152.142.63 at 2016-10-19 07:01:06 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 136.152.142.63 at 2016-10-19 07:01:07 +0000
+Processing by ExploreController#view as HTML
+  Rendered explore/explore.html.haml within layouts/application (14.8ms)
+Completed 200 OK in 410ms (Views: 391.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:00:00 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:00:01 +0000
+Processing by ExploreController#view as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:00:01.484509"], ["updated_at", "2016-10-19 08:00:01.484509"]]
+  [1m[35m (9.1ms)[0m  commit transaction
+  Rendered explore/explore.html.haml within layouts/application (6.6ms)
+Completed 200 OK in 387ms (Views: 338.0ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:01:12 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:01:13 +0000
+Processing by ExploreController#view as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:01:13.669883"], ["updated_at", "2016-10-19 08:01:13.669883"]]
+  [1m[35m (11.6ms)[0m  commit transaction
+  Rendered explore/explore.html.haml within layouts/application (16.9ms)
+Completed 200 OK in 433ms (Views: 355.4ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:01:40 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:01:41 +0000
+Processing by ExploreController#view as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:01:41.270824"], ["updated_at", "2016-10-19 08:01:41.270824"]]
+  [1m[35m (16.1ms)[0m  commit transaction
+  Rendered explore/explore.html.haml within layouts/application (12.3ms)
+Completed 200 OK in 528ms (Views: 464.3ms | ActiveRecord: 18.5ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:03:56 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:03:56 +0000
+Processing by ExploreController#view as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:03:57.006959"], ["updated_at", "2016-10-19 08:03:57.006959"]]
+  [1m[35m (14.4ms)[0m  commit transaction
+  Rendered explore/explore.html.haml within layouts/application (13.1ms)
+Completed 200 OK in 382ms (Views: 322.4ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:05:25 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:05:26 +0000
+Processing by ExploreController#view as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:05:26.544770"], ["updated_at", "2016-10-19 08:05:26.544770"]]
+  [1m[35m (9.7ms)[0m  commit transaction
+  Rendered explore/explore.html.haml within layouts/application (92.3ms)
+Completed 200 OK in 513ms (Views: 451.2ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:07:16 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:07:17 +0000
+Processing by ExploreController#view as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:07:17.081818"], ["updated_at", "2016-10-19 08:07:17.081818"]]
+  [1m[35m (13.9ms)[0m  commit transaction
+  [1m[36mBird Load (0.3ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  Rendered explore/explore.html.haml within layouts/application (35.5ms)
+Completed 200 OK in 340ms (Views: 282.4ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:08:13 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:08:14 +0000
+Processing by ExploreController#view as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.6ms)[0m  [1mINSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:08:14.532243"], ["updated_at", "2016-10-19 08:08:14.532243"]]
+  [1m[35m (11.2ms)[0m  commit transaction
+  [1m[36mBird Load (0.3ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  Rendered explore/explore.html.haml within layouts/application (35.4ms)
+Completed 200 OK in 357ms (Views: 297.7ms | ActiveRecord: 14.8ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:08:37 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:08:37 +0000
+Processing by ExploreController#view as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:08:37.916215"], ["updated_at", "2016-10-19 08:08:37.916215"]]
+  [1m[35m (19.2ms)[0m  commit transaction
+  [1m[36mBird Load (0.3ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  Rendered explore/explore.html.haml within layouts/application (87.5ms)
+Completed 500 Internal Server Error in 176ms (ActiveRecord: 20.7ms)
+
+ActionView::Template::Error (undefined local variable or method `gon' for #<#<Class:0x000000024184b0>:0x00000002487608>):
+    12:       }
+    13:   %body
+    14:     %h3 My Google Maps Demo
+    15:     %h3 #{gon.test}
+    16:     #map
+    17:     :javascript
+    18:       function initMap() {
+  app/views/explore/explore.html.haml:15:in `_app_views_explore_explore_html_haml__51883323459772629_20236100'
+  app/controllers/explore_controller.rb:15:in `view'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (88.1ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:09:04 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:09:04 +0000
+Processing by ExploreController#view as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:09:04.769990"], ["updated_at", "2016-10-19 08:09:04.769990"]]
+  [1m[35m (11.3ms)[0m  commit transaction
+  [1m[36mBird Load (0.3ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  Rendered explore/explore.html.haml within layouts/application (35.5ms)
+Completed 200 OK in 341ms (Views: 280.2ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:09:35 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:09:36 +0000
+Processing by ExploreController#view as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:09:36.386675"], ["updated_at", "2016-10-19 08:09:36.386675"]]
+  [1m[35m (11.5ms)[0m  commit transaction
+  [1m[36mBird Load (0.3ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  Rendered explore/explore.html.haml within layouts/application (31.8ms)
+Completed 200 OK in 375ms (Views: 316.2ms | ActiveRecord: 12.8ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:10:38 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:10:38 +0000
+Processing by ExploreController#view as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:10:38.782126"], ["updated_at", "2016-10-19 08:10:38.782126"]]
+  [1m[35m (10.2ms)[0m  commit transaction
+  [1m[36mBird Load (0.3ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  Rendered explore/explore.html.haml within layouts/application (35.9ms)
+Completed 200 OK in 331ms (Views: 274.5ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:12:44 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:12:45 +0000
+Processing by ExploreController#view as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:12:45.133728"], ["updated_at", "2016-10-19 08:12:45.133728"]]
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36mBird Load (0.3ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  Rendered explore/explore.html.haml within layouts/application (40.6ms)
+Completed 200 OK in 344ms (Views: 286.9ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:13:31 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:13:32 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mSQL (13.3ms)[0m  DELETE FROM "birds"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:13:32.421664"], ["updated_at", "2016-10-19 08:13:32.421664"]]
+  [1m[36m (10.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mBird Load (0.3ms)[0m  SELECT "birds".* FROM "birds"
+  Rendered explore/explore.html.haml within layouts/application (19.1ms)
+Completed 200 OK in 389ms (Views: 313.0ms | ActiveRecord: 25.6ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:14:04 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:14:04 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mSQL (9.8ms)[0m  DELETE FROM "birds"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:14:05.054857"], ["updated_at", "2016-10-19 08:14:05.054857"]]
+  [1m[36m (9.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mBird Load (0.3ms)[0m  SELECT "birds".* FROM "birds"
+  Rendered explore/explore.html.haml within layouts/application (27.1ms)
+Completed 200 OK in 352ms (Views: 286.4ms | ActiveRecord: 20.5ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:14:57 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:14:58 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mSQL (11.5ms)[0m  DELETE FROM "birds"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:14:58.592706"], ["updated_at", "2016-10-19 08:14:58.592706"]]
+  [1m[36m (16.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mBird Load (0.3ms)[0m  SELECT "birds".* FROM "birds"
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 29.3ms)
+
+NoMethodError (undefined method `<' for []:Array
+Did you mean?  <<):
+  app/controllers/explore_controller.rb:16:in `block in view'
+  app/controllers/explore_controller.rb:15:in `view'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (98.7ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:15:22 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:15:23 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mSQL (10.3ms)[0m  DELETE FROM "birds"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:15:23.591335"], ["updated_at", "2016-10-19 08:15:23.591335"]]
+  [1m[36m (11.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mBird Load (0.3ms)[0m  SELECT "birds".* FROM "birds"
+  Rendered explore/explore.html.haml within layouts/application (36.5ms)
+Completed 200 OK in 431ms (Views: 353.2ms | ActiveRecord: 23.9ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:16:01 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:16:02 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mSQL (9.1ms)[0m  DELETE FROM "birds"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:16:02.475934"], ["updated_at", "2016-10-19 08:16:02.475934"]]
+  [1m[36m (9.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mBird Load (1.0ms)[0m  SELECT "birds".* FROM "birds"
+  Rendered explore/explore.html.haml within layouts/application (23.2ms)
+Completed 200 OK in 405ms (Views: 331.0ms | ActiveRecord: 22.0ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:16:53 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (4.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:16:54 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mSQL (8.8ms)[0m  DELETE FROM "birds"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:16:54.720359"], ["updated_at", "2016-10-19 08:16:54.720359"]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mBird Load (0.3ms)[0m  SELECT "birds".* FROM "birds"
+  Rendered explore/explore.html.haml within layouts/application (33.3ms)
+Completed 200 OK in 456ms (Views: 378.1ms | ActiveRecord: 21.4ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:17:23 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:17:24 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mSQL (19.2ms)[0m  DELETE FROM "birds"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:17:24.196367"], ["updated_at", "2016-10-19 08:17:24.196367"]]
+  [1m[36m (10.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mBird Load (0.2ms)[0m  SELECT "birds".* FROM "birds"
+  Rendered explore/explore.html.haml within layouts/application (19.8ms)
+Completed 200 OK in 337ms (Views: 265.6ms | ActiveRecord: 30.7ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:18:16 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:18:16 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mSQL (15.6ms)[0m  DELETE FROM "birds"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:18:16.898123"], ["updated_at", "2016-10-19 08:18:16.898123"]]
+  [1m[36m (7.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mBird Load (0.9ms)[0m  SELECT "birds".* FROM "birds"
+  Rendered explore/explore.html.haml within layouts/application (23.2ms)
+Completed 200 OK in 340ms (Views: 279.7ms | ActiveRecord: 25.2ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:19:05 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:19:05 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mSQL (12.0ms)[0m  DELETE FROM "birds"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.4ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:19:05.866018"], ["updated_at", "2016-10-19 08:19:05.866018"]]
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mBird Load (0.3ms)[0m  SELECT "birds".* FROM "birds"
+  Rendered explore/explore.html.haml within layouts/application (30.1ms)
+Completed 200 OK in 377ms (Views: 297.2ms | ActiveRecord: 29.5ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:19:37 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:19:37 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mSQL (11.0ms)[0m  DELETE FROM "birds"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:19:37.967755"], ["updated_at", "2016-10-19 08:19:37.967755"]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mBird Load (0.3ms)[0m  SELECT "birds".* FROM "birds"
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 23.6ms)
+
+NoMethodError (undefined method `to_hash' for #<Bird:0x0000000364dc20>
+Did you mean?  to_s):
+  app/controllers/explore_controller.rb:16:in `block in view'
+  app/controllers/explore_controller.rb:15:in `view'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.3ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:20:43 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:20:43 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mSQL (12.3ms)[0m  DELETE FROM "birds"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:20:43.635549"], ["updated_at", "2016-10-19 08:20:43.635549"]]
+  [1m[36m (10.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mBird Load (0.2ms)[0m  SELECT "birds".* FROM "birds"
+  Rendered explore/explore.html.haml within layouts/application (25.5ms)
+Completed 200 OK in 343ms (Views: 278.6ms | ActiveRecord: 24.0ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:21:35 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:21:36 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mSQL (10.6ms)[0m  DELETE FROM "birds"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:21:36.388219"], ["updated_at", "2016-10-19 08:21:36.388219"]]
+  [1m[36m (9.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mBird Load (0.3ms)[0m  SELECT "birds".* FROM "birds"
+  Rendered explore/explore.html.haml within layouts/application (26.8ms)
+Completed 200 OK in 404ms (Views: 335.3ms | ActiveRecord: 22.2ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:22:48 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:22:49 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mSQL (12.0ms)[0m  DELETE FROM "birds"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:22:49.158069"], ["updated_at", "2016-10-19 08:22:49.158069"]]
+  [1m[36m (9.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mBird Load (0.2ms)[0m  SELECT "birds".* FROM "birds"
+  Rendered explore/explore.html.haml within layouts/application (33.5ms)
+Completed 200 OK in 401ms (Views: 322.2ms | ActiveRecord: 26.1ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:23:23 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:23:23 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mSQL (10.3ms)[0m  DELETE FROM "birds"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:23:23.678109"], ["updated_at", "2016-10-19 08:23:23.678109"]]
+  [1m[36m (10.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mBird Load (0.2ms)[0m  SELECT "birds".* FROM "birds"
+  Rendered explore/explore.html.haml within layouts/application (24.9ms)
+Completed 200 OK in 330ms (Views: 265.7ms | ActiveRecord: 22.2ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:23:55 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:23:56 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mSQL (15.0ms)[0m  DELETE FROM "birds"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.1ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:23:56.685297"], ["updated_at", "2016-10-19 08:23:56.685297"]]
+  [1m[36m (9.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["locationX", -5.363], ["locationY", 131.044], ["name", "uluru2"], ["created_at", "2016-10-19 08:23:56.705861"], ["updated_at", "2016-10-19 08:23:56.705861"]]
+  [1m[35m (7.0ms)[0m  commit transaction
+  [1m[36mBird Load (0.2ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  Rendered explore/explore.html.haml within layouts/application (24.9ms)
+Completed 200 OK in 369ms (Views: 281.8ms | ActiveRecord: 35.4ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:25:33 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:25:33 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mSQL (7.9ms)[0m  DELETE FROM "birds"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:25:33.879603"], ["updated_at", "2016-10-19 08:25:33.879603"]]
+  [1m[36m (10.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["locationX", -5.363], ["locationY", 131.044], ["name", "uluru2"], ["created_at", "2016-10-19 08:25:33.906983"], ["updated_at", "2016-10-19 08:25:33.906983"]]
+  [1m[35m (6.9ms)[0m  commit transaction
+  [1m[36mBird Load (0.2ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  Rendered explore/explore.html.haml within layouts/application (27.0ms)
+Completed 200 OK in 403ms (Views: 313.0ms | ActiveRecord: 28.9ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:26:00 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:26:00 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mSQL (11.1ms)[0m  DELETE FROM "birds"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:26:00.761042"], ["updated_at", "2016-10-19 08:26:00.761042"]]
+  [1m[36m (8.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["locationX", -5.363], ["locationY", 131.044], ["name", "uluru2"], ["created_at", "2016-10-19 08:26:00.777862"], ["updated_at", "2016-10-19 08:26:00.777862"]]
+  [1m[35m (9.8ms)[0m  commit transaction
+  [1m[36mBird Load (0.2ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  Rendered explore/explore.html.haml within layouts/application (27.3ms)
+Completed 200 OK in 339ms (Views: 262.7ms | ActiveRecord: 30.5ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:26:25 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:26:26 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mSQL (8.7ms)[0m  DELETE FROM "birds"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:26:26.333108"], ["updated_at", "2016-10-19 08:26:26.333108"]]
+  [1m[36m (7.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["locationX", -5.363], ["locationY", 131.044], ["name", "uluru2"], ["created_at", "2016-10-19 08:26:26.349758"], ["updated_at", "2016-10-19 08:26:26.349758"]]
+  [1m[35m (9.4ms)[0m  commit transaction
+  [1m[36mBird Load (0.3ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  Rendered explore/explore.html.haml within layouts/application (26.8ms)
+Completed 200 OK in 338ms (Views: 266.8ms | ActiveRecord: 27.4ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:26:55 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:26:56 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mSQL (17.7ms)[0m  DELETE FROM "birds"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:26:56.467992"], ["updated_at", "2016-10-19 08:26:56.467992"]]
+  [1m[36m (9.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["locationX", -5.363], ["locationY", 131.044], ["name", "uluru2"], ["created_at", "2016-10-19 08:26:56.492345"], ["updated_at", "2016-10-19 08:26:56.492345"]]
+  [1m[35m (9.9ms)[0m  commit transaction
+  [1m[36mBird Load (0.4ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  Rendered explore/explore.html.haml within layouts/application (37.9ms)
+Completed 200 OK in 502ms (Views: 383.1ms | ActiveRecord: 39.1ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:27:21 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:27:22 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mSQL (12.5ms)[0m  DELETE FROM "birds"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:27:22.358160"], ["updated_at", "2016-10-19 08:27:22.358160"]]
+  [1m[36m (9.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["locationX", -5.363], ["locationY", 131.044], ["name", "uluru2"], ["created_at", "2016-10-19 08:27:22.377869"], ["updated_at", "2016-10-19 08:27:22.377869"]]
+  [1m[35m (12.2ms)[0m  commit transaction
+  [1m[36mBird Load (0.3ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  Rendered explore/explore.html.haml within layouts/application (34.7ms)
+Completed 200 OK in 414ms (Views: 326.7ms | ActiveRecord: 36.1ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:27:48 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:27:49 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mSQL (18.6ms)[0m  DELETE FROM "birds"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:27:49.339292"], ["updated_at", "2016-10-19 08:27:49.339292"]]
+  [1m[36m (11.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["locationX", -5.363], ["locationY", 131.044], ["name", "uluru2"], ["created_at", "2016-10-19 08:27:49.359912"], ["updated_at", "2016-10-19 08:27:49.359912"]]
+  [1m[35m (9.2ms)[0m  commit transaction
+  [1m[36mBird Load (0.4ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  Rendered explore/explore.html.haml within layouts/application (33.3ms)
+Completed 200 OK in 438ms (Views: 346.0ms | ActiveRecord: 40.7ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:28:29 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:28:29 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mSQL (10.2ms)[0m  DELETE FROM "birds"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:28:29.792845"], ["updated_at", "2016-10-19 08:28:29.792845"]]
+  [1m[36m (7.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["locationX", -5.363], ["locationY", 131.044], ["name", "uluru2"], ["created_at", "2016-10-19 08:28:29.813951"], ["updated_at", "2016-10-19 08:28:29.813951"]]
+  [1m[35m (9.2ms)[0m  commit transaction
+  [1m[36mBird Load (0.3ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  Rendered explore/explore.html.haml within layouts/application (26.0ms)
+Completed 200 OK in 333ms (Views: 260.1ms | ActiveRecord: 28.9ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:29:03 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:29:04 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mSQL (12.2ms)[0m  DELETE FROM "birds"
+  [1m[36m (0.8ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:29:04.106961"], ["updated_at", "2016-10-19 08:29:04.106961"]]
+  [1m[36m (11.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["locationX", -5.363], ["locationY", 131.044], ["name", "uluru2"], ["created_at", "2016-10-19 08:29:04.128511"], ["updated_at", "2016-10-19 08:29:04.128511"]]
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36mBird Load (0.3ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  Rendered explore/explore.html.haml within layouts/application (23.0ms)
+Completed 200 OK in 367ms (Views: 284.2ms | ActiveRecord: 35.7ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:29:39 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:29:39 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mSQL (12.9ms)[0m  DELETE FROM "birds"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:29:40.048966"], ["updated_at", "2016-10-19 08:29:40.048966"]]
+  [1m[36m (16.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["locationX", -5.363], ["locationY", 131.044], ["name", "uluru2"], ["created_at", "2016-10-19 08:29:40.078323"], ["updated_at", "2016-10-19 08:29:40.078323"]]
+  [1m[35m (9.0ms)[0m  commit transaction
+  [1m[36mBird Load (0.3ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  Rendered explore/explore.html.haml within layouts/application (30.1ms)
+Completed 200 OK in 459ms (Views: 354.7ms | ActiveRecord: 40.0ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:30:14 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:30:14 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mSQL (9.6ms)[0m  DELETE FROM "birds"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:30:14.927140"], ["updated_at", "2016-10-19 08:30:14.927140"]]
+  [1m[36m (12.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["locationX", -5.363], ["locationY", 131.044], ["name", "uluru2"], ["created_at", "2016-10-19 08:30:14.949016"], ["updated_at", "2016-10-19 08:30:14.949016"]]
+  [1m[35m (9.2ms)[0m  commit transaction
+  [1m[36mBird Load (0.2ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  Rendered explore/explore.html.haml within layouts/application (23.9ms)
+Completed 200 OK in 421ms (Views: 338.1ms | ActiveRecord: 33.5ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:31:36 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:31:36 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mSQL (14.6ms)[0m  DELETE FROM "birds"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:31:36.977877"], ["updated_at", "2016-10-19 08:31:36.977877"]]
+  [1m[36m (13.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["locationX", -5.363], ["locationY", 131.044], ["name", "uluru2"], ["created_at", "2016-10-19 08:31:36.999727"], ["updated_at", "2016-10-19 08:31:36.999727"]]
+  [1m[35m (8.8ms)[0m  commit transaction
+  [1m[36mBird Load (0.3ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  Rendered explore/explore.html.haml within layouts/application (25.3ms)
+Completed 200 OK in 349ms (Views: 265.7ms | ActiveRecord: 38.3ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:32:23 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:32:24 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mSQL (14.5ms)[0m  DELETE FROM "birds"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:32:24.382853"], ["updated_at", "2016-10-19 08:32:24.382853"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["locationX", -5.363], ["locationY", 131.044], ["name", "uluru2"], ["created_at", "2016-10-19 08:32:24.405499"], ["updated_at", "2016-10-19 08:32:24.405499"]]
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36mBird Load (0.4ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  Rendered explore/explore.html.haml within layouts/application (44.6ms)
+Completed 200 OK in 530ms (Views: 418.3ms | ActiveRecord: 37.2ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:33:26 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:33:26 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mSQL (11.0ms)[0m  DELETE FROM "birds"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:33:26.985888"], ["updated_at", "2016-10-19 08:33:26.985888"]]
+  [1m[36m (9.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["locationX", -5.363], ["locationY", 131.044], ["name", "uluru2"], ["created_at", "2016-10-19 08:33:27.005306"], ["updated_at", "2016-10-19 08:33:27.005306"]]
+  [1m[35m (8.8ms)[0m  commit transaction
+  [1m[36mBird Load (0.2ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  Rendered explore/explore.html.haml within layouts/application (38.9ms)
+Completed 200 OK in 418ms (Views: 341.4ms | ActiveRecord: 31.6ms)
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 08:33:52 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 08:33:53 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mSQL (20.9ms)[0m  DELETE FROM "birds"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (7.0ms)[0m  INSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["locationX", -25.363], ["locationY", 131.044], ["name", "uluru"], ["created_at", "2016-10-19 08:33:53.573160"], ["updated_at", "2016-10-19 08:33:53.573160"]]
+  [1m[36m (10.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "birds" ("locationX", "locationY", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["locationX", -5.363], ["locationY", 131.044], ["name", "uluru2"], ["created_at", "2016-10-19 08:33:53.614950"], ["updated_at", "2016-10-19 08:33:53.614950"]]
+  [1m[35m (10.1ms)[0m  commit transaction
+  [1m[36mBird Load (0.3ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  Rendered explore/explore.html.haml within layouts/application (33.4ms)
+Completed 200 OK in 623ms (Views: 488.6ms | ActiveRecord: 50.4ms)

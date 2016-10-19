@@ -8,7 +8,12 @@ class ExploreController < ApplicationController
     
     
     def view
-   	render "explore.html"
+        Bird.delete_all
+        Bird.create({:locationX => -25.363, :locationY => 131.044, :name => 'uluru'})
+        Bird.create({:locationX => -5.363, :locationY => 131.044, :name => 'uluru2'})
+        @birds = Bird.all.as_json
+        gon.birds = @birds
+   	    render "explore.html"
    	end
 end
 
