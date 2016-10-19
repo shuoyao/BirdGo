@@ -55,6 +55,7 @@ Rails.application.routes.draw do
   #   end
   root :to => redirect('/explore')
   get '/explore' => 'explore#view'
+  post '/explore/search' => 'explore#search'
   
   
 end

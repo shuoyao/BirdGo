@@ -12,8 +12,15 @@
       }
   %body
     %h3 My Google Maps Demo
+    %h3 Search:
+    = form_tag '/explore/search' do
+      = text_field_tag 'search'
+      = submit_tag 'Search'
     #map
     :javascript
+      if (gon.birds.length == undefined) {
+        gon.birds = [gon.birds];
+      }
       function initMap() {
         var birds = [];
         for (var i = 0; i < gon.birds.length; i++) {
