@@ -269,3 +269,34 @@ Started GET "/assets/explore.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 136.152.142.116 at 2016-10-19 06:55:36 +0000
+
+
+Started GET "/" for 208.72.139.184 at 2016-10-19 07:45:43 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/explore" for 208.72.139.184 at 2016-10-19 07:45:44 +0000
+Processing by ExploreController#view as HTML
+  Rendered explore/explore.html.haml within layouts/application (8.2ms)
+Completed 200 OK in 433ms (Views: 417.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/explore.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 208.72.139.184 at 2016-10-19 07:45:44 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 208.72.139.184 at 2016-10-19 07:45:45 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 208.72.139.184 at 2016-10-19 07:45:45 +0000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 208.72.139.184 at 2016-10-19 07:45:45 +0000
+
+
+Started GET "/assets/explore.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 208.72.139.184 at 2016-10-19 07:45:45 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 208.72.139.184 at 2016-10-19 07:45:45 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 208.72.139.184 at 2016-10-19 07:45:48 +0000

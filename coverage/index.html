@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-10-19T02:58:18+00:00">2016-10-19T02:58:18+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-10-20T00:24:01+00:00">2016-10-20T00:24:01+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">50.54%</span></span>
+    (<span class="covered_percent"><span class="red">51.76%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.9
+         0.88
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>19</b> files in total.
-    <b>184</b> relevant lines. 
-    <span class="green"><b>93</b> lines covered</span> and
-    <span class="red"><b>91</b> lines missed </span>
+    <b>23</b> files in total.
+    <b>199</b> relevant lines. 
+    <span class="green"><b>103</b> lines covered</span> and
+    <span class="red"><b>96</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -51,13 +51,53 @@
     <tbody>
       
       <tr>
-        <td class="strong"><a href="#f5adf85d0d40d7898cdce0a622ffd024632cea63" class="src_link" title="app/models/bird.rb">app/models/bird.rb</a></td>
+        <td class="strong"><a href="#67248d23203cff5a5e3f2f96394e35ac39da449c" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>5</td>
+        <td>2</td>
+        <td>2</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#ad07ff5a23531699b01208cccc47e98631210695" class="src_link" title="app/controllers/explore_controller.rb">app/controllers/explore_controller.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>14</td>
+        <td>3</td>
+        <td>3</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#38dd3173794d4ab4cf7c64030cc7d79e698db685" class="src_link" title="app/helpers/application_helper.rb">app/helpers/application_helper.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>2</td>
         <td>1</td>
         <td>1</td>
         <td>0</td>
         <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#b60370c2aee3c866a81981f2ac36c0b00cf90457" class="src_link" title="app/helpers/explore_helper.rb">app/helpers/explore_helper.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>2</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#f5adf85d0d40d7898cdce0a622ffd024632cea63" class="src_link" title="app/models/bird.rb">app/models/bird.rb</a></td>
+        <td class="red strong">28.57 %</td>
+        <td>14</td>
+        <td>7</td>
+        <td>2</td>
+        <td>5</td>
+        <td>0.3</td>
       </tr>
       
       <tr>
@@ -193,9 +233,9 @@
       <tr>
         <td class="strong"><a href="#2f079e1ca494b4d86acbe46baaf74abeaf52d837" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>56</td>
-        <td>1</td>
-        <td>1</td>
+        <td>60</td>
+        <td>3</td>
+        <td>3</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -227,7 +267,7 @@
         <td>11</td>
         <td>10</td>
         <td>1</td>
-        <td>4.6</td>
+        <td>4.5</td>
       </tr>
       
       <tr>
@@ -256,9 +296,159 @@
     
       <div class="source_files">
       
-        <div class="source_table" id="f5adf85d0d40d7898cdce0a622ffd024632cea63">
+        <div class="source_table" id="67248d23203cff5a5e3f2f96394e35ac39da449c">
   <div class="header">
-    <h3>app/models/bird.rb</h3>
+    <h3>app/controllers/application_controller.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>2</b> relevant lines. 
+      <span class="green"><b>2</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class ApplicationController &lt; ActionController::Base</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby">  # Prevent CSRF attacks by raising an exception.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby">  # For APIs, you may want to use :null_session instead.</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  protect_from_forgery with: :exception</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="ad07ff5a23531699b01208cccc47e98631210695">
+  <div class="header">
+    <h3>app/controllers/explore_controller.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>3</b> relevant lines. 
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class ExploreController &lt; ApplicationController</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby">    # def index</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby">        </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">    #     @search = params[:search] ? params[:search] : {}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">    #     #@articles = Bird.search(@search)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">    #     @article = Bird.find_by(name: search)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">    # end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">    </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">    </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def view</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">   	render &quot;explore.html&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">   	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="38dd3173794d4ab4cf7c64030cc7d79e698db685">
+  <div class="header">
+    <h3>app/helpers/application_helper.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>1</b> relevant lines. 
@@ -273,10 +463,142 @@
         <li class="covered" data-hits="1" data-linenumber="1">
           <span class="hits">1</span>
           
-          <code class="ruby">class Bird &lt; ActiveRecord::Base</code>
+          <code class="ruby">module ApplicationHelper</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="b60370c2aee3c866a81981f2ac36c0b00cf90457">
+  <div class="header">
+    <h3>app/helpers/explore_helper.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>1</b> relevant lines. 
+      <span class="green"><b>1</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">module ExploreHelper</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="f5adf85d0d40d7898cdce0a622ffd024632cea63">
+  <div class="header">
+    <h3>app/models/bird.rb</h3>
+    <h4><span class="red">28.57 %</span> covered</h4>
+    <div>
+      <b>7</b> relevant lines. 
+      <span class="green"><b>2</b> lines covered</span> and
+      <span class="red"><b>5</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Bird &lt; ActiveRecord::Base</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def search(search_hash)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby">      </code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="4">
+          
+          
+          <code class="ruby">      state = (search_hash[:state] and [&quot;no_draft&quot;, &quot;birda&quot;, &quot;birdb&quot;, &quot;birdc&quot;, &quot;birdd&quot;].include? search_hash[:state]) ? search_hash[:state] : &#39;no_search&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">      </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">      </code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="7">
+          
+          
+          <code class="ruby">      list_function  = [&quot;Bird.#{state}&quot;]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="9">
+          
+          
+          <code class="ruby">      if search_hash[:category] and search_hash[:category].to_i &gt; 0</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="10">
+          
+          
+          <code class="ruby">        list_function &lt;&lt; &#39;category(search_hash[:category])&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="12">
+          
+          
+          <code class="ruby">      eval(list_function.join(&#39;.&#39;))</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby">end</code>
@@ -1419,8 +1741,8 @@
     <h3>config/routes.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>1</b> relevant lines. 
-      <span class="green"><b>1</b> lines covered</span> and
+      <b>3</b> relevant lines. 
+      <span class="green"><b>3</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1758,7 +2080,31 @@
           <code class="ruby">  #   end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="56">
+        <li class="covered" data-hits="1" data-linenumber="56">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  root :to =&gt; redirect(&#39;/explore&#39;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="57">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  get &#39;/explore&#39; =&gt; &#39;explore#view&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="58">
+          
+          
+          <code class="ruby">  </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="59">
+          
+          
+          <code class="ruby">  </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="60">
           
           
           <code class="ruby">end</code>
@@ -2262,8 +2608,8 @@
           <code class="ruby">When /^(?:|I )fill in &quot;([^&quot;]*)&quot; with &quot;([^&quot;]*)&quot;$/ do |field, value|</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="61">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="61">
+          <span class="hits">4</span>
           
           <code class="ruby">  fill_in(field, :with =&gt; value)</code>
         </li>
@@ -3612,20 +3958,20 @@
           <code class="ruby">        path_components = $1.split(/\s+/)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="29">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="7" data-linenumber="29">
+          <span class="hits">7</span>
           
           <code class="ruby">        self.send(path_components.push(&#39;path&#39;).join(&#39;_&#39;).to_sym)</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="30">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="6" data-linenumber="30">
+          <span class="hits">6</span>
           
           <code class="ruby">      rescue NoMethodError, ArgumentError</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="31">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="6" data-linenumber="31">
+          <span class="hits">6</span>
           
           <code class="ruby">        raise &quot;Can&#39;t find mapping from \&quot;#{page_name}\&quot; to a path.\n&quot; +</code>
         </li>
