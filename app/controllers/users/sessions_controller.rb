@@ -3,7 +3,7 @@ class Users::SessionsController < Devise::SessionsController
 
   # GET /resource/sign_in
   def new
-    render 'new.html'
+    render 'devise/sessions/new.html'
   end
 
   # POST /resource/sign_in
