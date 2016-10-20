@@ -14,9 +14,9 @@ Background: birds in database
   | Zeus         | 2016-03-11
 
 Scenario: search for a bird
-  When I am on BirdGo Explore page
-  And  I click the search text field 
-  And  I fill the textfield with "Im so cool"
+  When I am on the explore page
+  And  I fill in "search" with "Im so cool"
+  And  I press "Search"
   And  I can see dropdown hint with an entry of "Im so Cool" in it
   And  I press "Im so Cool"
   And  I am on the a pin place where "Im so Cool" is shown 
