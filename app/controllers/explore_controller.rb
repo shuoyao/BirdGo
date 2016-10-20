@@ -2,7 +2,7 @@ class ExploreController < ApplicationController
     
     def search
         @search = params[:search] ? params[:search] : {}
-        flash[:search_result] = Bird.find_by(name: @search)
+        flash[:search_result] = Bird.where(name: @search)
         redirect_to explore_path
     end
     
@@ -15,6 +15,9 @@ class ExploreController < ApplicationController
             @birds = flash[:search_result].as_json
         else
             @birds = Bird.all.as_json
+        end
+        if !(@birds.is_a? Array)
+            @birds = [@birds]
         end
         gon.birds = @birds
    	    render "explore.html"

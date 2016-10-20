@@ -18,9 +18,7 @@
       = submit_tag 'Search'
     #map
     :javascript
-      if (gon.birds.length == undefined) {
-        gon.birds = [gon.birds];
-      }
+      $('#search_result').reset();
       function initMap() {
         var birds = [];
         for (var i = 0; i < gon.birds.length; i++) {
@@ -41,3 +39,5 @@
       }
     %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyAZAXAHxRrKlhRSya8IoRc2goYTuUi3ISE&callback=initMap"}
       :cdata
+
+%input{:type =>"hidden", :value =>@birds, :id => "search_result"}

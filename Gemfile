@@ -17,6 +17,7 @@ group :development, :test do
   gem 'launchy'
   gem 'rspec-rails', '3.4.2'
   gem 'ZenTest', '4.11.0'
+  gem 'selenium-webdriver'
 end
 
 group :test do
