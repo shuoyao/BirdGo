@@ -49,8 +49,8 @@ Rails.application.routes.draw do
   #   end
   
   devise_for :users, controllers: {
-        sessions: 'users/sessions',
-        registrations: 'users/registrations'
+        sessions: 'sessions',
+        registrations: 'sessions'
   }
   
   root :to => redirect('/users/sign_in')
