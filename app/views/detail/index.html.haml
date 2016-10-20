@@ -1,68 +1,3 @@
-// !!!
-// %html
-//   %head
-//     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-//     %meta{:content => "initial-scale=1.0, user-scalable=no", :name => "viewport"}/
-//     %meta{:charset => "utf-8"}/
-//     %title Info windows
-//     :css
-//       html, body {
-//         height: 100%;
-//         margin: 0;
-//         padding: 0;
-//       }
-//       #map {
-//         height: 100%;
-//       }
-//   %body
-//     #map
-//     :javascript
-//       // This example displays a marker at the center of Australia.
-//       // When the user clicks the marker, an info window opens.
-//       function initMap() {
-//         var uluru = {lat: -25.363, lng: 131.044};
-//         var map = new google.maps.Map(document.getElementById('map'), {
-//           zoom: 4,
-//           center: uluru
-//         });
-
-//         var contentString = '<div id="content">'+
-//             '<div id="siteNotice">'+
-//             '</div>'+
-//             '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
-//             '<div id="bodyContent">'+
-//             '<p><b>'
-//             + #{@name}
-//             + '</b>' +
-//             + #{@locationX}
-//             + #{@locationY}
-//             + #{@wiki_link}
-//             + #{@last_seen}
-//             + #{@frequency}
-//             + '</p>'+
-//             '<p>Link: <a href=' + '\#{wiki_link}' + '>'
-//             + '\#{wiki_link}</a>'+
-//             '</p>'+
-//             '</div>'+
-//             '</div>';
-
-//         var infowindow = new google.maps.InfoWindow({
-//           content: contentString
-//         });
-
-//         var marker = new google.maps.Marker({
-//           position: uluru,
-//           map: map,
-//           title: '\#{name}'
-//         });
-//         marker.addListener('click', function() {
-//           infowindow.open(map, marker);
-//         });
-//       }
-//     %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyAZAXAHxRrKlhRSya8IoRc2goYTuUi3ISE&callback=initMap"}
-//       :cdata
-
-
 !!!
 %html
   %head
@@ -101,9 +36,9 @@
              + '</b>' +
              + #{@locationX}
              + #{@locationY}
-            // + #{@wiki_link}
-            // + #{@last_seen}
-            // + #{@frequency}
+            + #{@wiki_link}
+            + #{@last_seen}
+            + #{@frequency}
              + '</p>'+
              '<p>Link: <a href=' + '\#{wiki_link}' + '>'
              + '\#{wiki_link}</a>'+

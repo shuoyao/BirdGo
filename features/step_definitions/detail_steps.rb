@@ -8,3 +8,10 @@ When(/^I click pin at location "([^"]*)", "([^"]*)"$/) do |arg1, arg2|
   end
 end
 
+When /^(?:|I )could see "([^"]*)"$/ do |text|
+    expect(page.body).to include(text)
+end
+
+When /^(?:|I )could not see "([^"]*)"$/ do |text|
+    expect(page.body).not_to include(text)
+end

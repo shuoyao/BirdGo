@@ -31,6 +31,10 @@ module WithinHelpers
 end
 World(WithinHelpers)
 
+When /^show me everything on page$/ do 
+  print page.html
+end
+
 # Single-line step scoper
 When /^(.*) within (.*[^:])$/ do |step, parent|
   with_scope(parent) { When step }
@@ -42,6 +46,7 @@ When /^(.*) within (.*[^:]):$/ do |step, parent, table_or_string|
 end
 
 Given /^(?:|I )am on (.+)$/ do |page_name|
+  print page.body
   visit path_to(page_name)
 end
 
