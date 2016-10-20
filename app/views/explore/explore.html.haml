@@ -1,4 +1,7 @@
 !!!
+
+= include_gon
+
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
@@ -9,19 +12,32 @@
       }
   %body
     %h3 My Google Maps Demo
+    %h3 Search:
+    = form_tag '/explore/search' do
+      = text_field_tag 'search'
+      = submit_tag 'Search'
     #map
     :javascript
+      if (gon.birds.length == undefined) {
+        gon.birds = [gon.birds];
+      }
       function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
-        var uluru_ = {lat: -0.363, lng: 131.044};
+        var birds = [];
+        for (var i = 0; i < gon.birds.length; i++) {
+          bird = gon.birds[i];
+          birds.push({lat: bird.locationX, lng: bird.locationY});
+        }
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 4,
-          center: uluru
+          center: birds[0]
         });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
+        for (var i = 0; i < birds.length; i++) {
+          pin = birds[i];
+          var marker = new google.maps.Marker({
+            position: pin,
+            map: map
+          });
+        }
       }
     %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyAZAXAHxRrKlhRSya8IoRc2goYTuUi3ISE&callback=initMap"}
       :cdata

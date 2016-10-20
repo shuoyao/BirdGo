@@ -37,6 +37,7 @@ gem 'uglifier', '>= 2.7.1'
 
 gem 'jquery-rails'
 gem 'haml'
+gem 'gon'
 
 gem 'rubygems-bundler'
 gem 'rake', '>=11.3.0'
