@@ -3,77 +3,40 @@
   = stylesheet_link_tag 'devise/sessions/new_scss'
 - content_for :header do
   = javascript_include_tag 'devise/sessions/new.js'
-
-.logmod
-  .logmod__wrapper
-    .logmod__container
-      %ul.logmod__tabs
-        %li{"data-tabtar" => "lgm-2"}
-          %a{:href => "#"} Login
-        %li{"data-tabtar" => "lgm-1"}
-          %a{:href => "#"} Sign Up
-      .logmod__tab-wrapper
-        .logmod__tab.lgm-1
-          .logmod__heading
-            %span.logmod__heading-subtitle
-              Enter your personal details
-              %strong to create an acount
-          .logmod__form
-            %form.simform{"accept-charset" => "utf-8", :action => "#"}
-              .sminputs
-                .input.full
-                  %label.string.optional{:for => "user-name"} Email*
-                  %input#user-email.string.optional{:maxlength => "255", :placeholder => "Email", :size => "50", :type => "email"}/
-              .sminputs
-                .input.string.optional
-                  %label.string.optional{:for => "user-pw"} Password *
-                  %input#user-pw.string.optional{:maxlength => "255", :placeholder => "Password", :size => "50", :type => "text"}/
-                .input.string.optional
-                  %label.string.optional{:for => "user-pw-repeat"} Repeat password *
-                  %input#user-pw-repeat.string.optional{:maxlength => "255", :placeholder => "Repeat password", :size => "50", :type => "text"}/
-              .simform__actions
-                %input.sumbit{:name => "commit", :type => "sumbit", :value => "Create Account"}/
-                %span.simform__actions-sidetext
-                  By creating an account you agree to our
-                  %a.special{:href => "#", :role => "link", :target => "_blank"} Terms  Privacy
-          .logmod__alter
-            .logmod__alter-container
-              %a.connect.facebook{:href => "#"}
-                .connect__icon
-                  %i.fa.fa-facebook
-                .connect__context
-                  %span
-                    Create an account with
-                    %strong Facebook
-              %a.connect.googleplus{:href => "#"}
-                .connect__icon
-                  %i.fa.fa-google-plus
-                .connect__context
-                  %span
-                    Create an account with
-                    %strong Google+
-        .logmod__tab.lgm-2
-          .logmod__heading
-            %span.logmod__heading-subtitle
-              Enter your email and password
-              %strong to sign in
-          .logmod__form
-            %form.simform{"accept-charset" => "utf-8", :action => "#"}
-              .sminputs
-                .input.full
-                  %label.string.optional{:for => "user-name"} Email*
-                  %input#user-email.string.optional{:maxlength => "255", :placeholder => "Email", :size => "50", :type => "email"}/
-              .sminputs
-                .input.full
-                  %label.string.optional{:for => "user-pw"} Password *
-                  %input#user-pw.string.optional{:maxlength => "255", :placeholder => "Password", :size => "50", :type => "password"}/
-                  %span.hide-password Show
-              .simform__actions
-                %input.sumbit{:name => "commit", :type => "sumbit", :value => "Log In"}/
-                %span.simform__actions-sidetext
-                  %a.special{:href => "#", :role => "link"}
-                    Forgot your password?
-                    %br Click here
+ 
+%body
+  .logmod
+    .logmod__wrapper
+      .logmod__container
+        %ul.logmod__tabs
+          %li{"data-tabtar" => "lgm-2"}
+            %a{:href => "#"} Login
+          %li{"data-tabtar" => "lgm-1"}
+            %a{:href => "#"} Sign Up
+        .logmod__tab-wrapper
+          .logmod__tab.lgm-1
+            .logmod__heading
+              %span.logmod__heading-subtitle
+                Enter your personal details
+                %strong to create an acount
+            .logmod__form
+              %form.simform{"accept-charset" => "utf-8", :action => "#"}
+                .sminputs
+                  .input.full
+                    %label.string.optional{:for => "user-name"} Email*
+                    %input#user-email.string.optional{:maxlength => "255", :placeholder => "Email", :size => "50", :type => "email"}/
+                .sminputs
+                  .input.string.optional
+                    %label.string.optional{:for => "user-pw"} Password *
+                    %input#user-pw.string.optional{:maxlength => "255", :placeholder => "Password", :size => "50", :type => "text"}/
+                  .input.string.optional
+                    %label.string.optional{:for => "user-pw-repeat"} Repeat password *
+                    %input#user-pw-repeat.string.optional{:maxlength => "255", :placeholder => "Repeat password", :size => "50", :type => "text"}/
+                .simform__actions
+                  %input.sumbit{:name => "commit", :type => "sumbit", :value => "Create Account"}/
+                  %span.simform__actions-sidetext
+                    By creating an account you agree to our
+                    %a.special{:href => "#", :role => "link", :target => "_blank"} Terms  Privacy
             .logmod__alter
               .logmod__alter-container
                 %a.connect.facebook{:href => "#"}
@@ -81,12 +44,50 @@
                     %i.fa.fa-facebook
                   .connect__context
                     %span
-                      Sign in with
+                      Create an account with
                       %strong Facebook
                 %a.connect.googleplus{:href => "#"}
                   .connect__icon
                     %i.fa.fa-google-plus
                   .connect__context
                     %span
-                      Sign in with
+                      Create an account with
                       %strong Google+
+          .logmod__tab.lgm-2
+            .logmod__heading
+              %span.logmod__heading-subtitle
+                Enter your email and password
+                %strong to sign in
+            .logmod__form
+              %form.simform{"accept-charset" => "utf-8", :action => "#"}
+                .sminputs
+                  .input.full
+                    %label.string.optional{:for => "user-name"} Email*
+                    %input#user-email.string.optional{:maxlength => "255", :placeholder => "Email", :size => "50", :type => "email"}/
+                .sminputs
+                  .input.full
+                    %label.string.optional{:for => "user-pw"} Password *
+                    %input#user-pw.string.optional{:maxlength => "255", :placeholder => "Password", :size => "50", :type => "password"}/
+                    %span.hide-password Show
+                .simform__actions
+                  %input.sumbit{:name => "commit", :type => "sumbit", :value => "Log In"}/
+                  %span.simform__actions-sidetext
+                    %a.special{:href => "#", :role => "link"}
+                      Forgot your password?
+                      %br Click here
+              .logmod__alter
+                .logmod__alter-container
+                  %a.connect.facebook{:href => "#"}
+                    .connect__icon
+                      %i.fa.fa-facebook
+                    .connect__context
+                      %span
+                        Sign in with
+                        %strong Facebook
+                  %a.connect.googleplus{:href => "#"}
+                    .connect__icon
+                      %i.fa.fa-google-plus
+                    .connect__context
+                      %span
+                        Sign in with
+                        %strong Google+

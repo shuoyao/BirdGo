@@ -3087,3 +3087,16 @@ Completed 200 OK in 1061ms (Views: 1017.5ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/assets/devise/sessions/new_scss.self-e0f3612746cfcc04ae690834fa0d64b4a2dffbdcaac67462c703649eefd7b910.css?body=1" for 71.202.182.158 at 2016-10-20 02:16:46 +0000
+
+
+Started GET "/users/sign_in" for 71.202.182.158 at 2016-10-20 04:45:33 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Users::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.haml within layouts/application (565.1ms)
+Completed 200 OK in 650ms (Views: 626.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 71.202.182.158 at 2016-10-20 04:46:50 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.haml within layouts/application (71.2ms)
+Completed 200 OK in 88ms (Views: 86.6ms | ActiveRecord: 0.0ms)
