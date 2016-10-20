@@ -39,6 +39,7 @@ gem 'rubygems-bundler'
 gem 'rake', '>=11.3.0'
 
 gem 'turbolinks'
+gem 'launchy'
 
 # Use unicorn as the web server
 # gem 'unicorn'
