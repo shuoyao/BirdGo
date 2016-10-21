@@ -47,7 +47,7 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  root :to => redirect('/login')
-  get '/login' => 'login#view'
-  post '/login' => 'login#login'
+  get '/main', to: 'mainpage#show', as: 'mainpage'
+  devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations' }
+  root :to => redirect('/main')
 end
