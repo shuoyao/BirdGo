@@ -1,12 +1,13 @@
 source 'https://rubygems.org'
 
-ruby '>= 2.2.0'
+ruby '2.2.0'
 gem 'rails', '4.2.6'
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
+
+# This is for login system - Mingjian
+gem 'devise'
 gem 'turbolinks'
 gem 'bourbon'
-gem 'devise'
+gem 'bootstrap-sass'
 
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do

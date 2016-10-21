@@ -15,25 +15,19 @@ module NavigationHelpers
 
     when /^the home\s?page$/
       '/'
+    
+    when /^the Birdgo map page$/
+      explore_path
+      
+    when /^the login page$/
+      new_user_session_path
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
     #   when /^(.*)'s profile page$/i
     #     user_profile_path(User.find_by_login($1))
-    when /^the RottenPotatoes home page$/ then '/movies'
     
-    when /^the explore\s?page for "(.*)"$/
-      movie = Movie.find_by(title: $1)
-      edit_movie_path(movie.id)
-      
-    when /^the details\s?page for "(.*)"$/
-      movie = Movie.find_by(title: $1)
-      movie_path(movie.id)
-      
-    when /^the Similar Movies page for "(.*)"$/
-      movie = Movie.find_by(title: $1)
-      same_director_path(movie)
     else
       begin
         page_name =~ /^the (.*) page$/
