@@ -6,13 +6,21 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
+<<<<<<< HEAD
   config.secret_key = '290316d908bbe8ccdcbc928883bbf7f956c40bd38c14d39acbc77444ede5542e103a0183d055379ec3f5045e38a09cd86a30e2348eb4d13864589e0d2d1d49be'
+=======
+  # config.secret_key = 'c57d8cebb616c70e3d51b95dd54af3dd8eda5b5f576b4185043d532b25705677eecf0d50f0a59493cb949e35172b81018d335a1cef13e9fae9dd57bb71d111a9'
+>>>>>>> login-dev-tmp
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
+<<<<<<< HEAD
   config.mailer_sender = 'birdgo169@gmail.com'
+=======
+  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+>>>>>>> login-dev-tmp
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -108,7 +116,11 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
+<<<<<<< HEAD
   # config.pepper = '30ab2735df8f32d0ff103e13167e8201eeccf2b2ef443557c2c95018e4f4f0a285eac8d88726573dd801206e37c20c521dc0bebbe2d3d847b481731fc376f979'
+=======
+  # config.pepper = 'd704fa1d95ce7555e4b7600799ec2b71f77c35b581c29d4a2a3581ffbcf139c0983cd7c4bbde926578f990fb42a303830f785e0e53b4d64e8eef1f5a2a533ca4'
+>>>>>>> login-dev-tmp
 
   # Send a notification email when the user's password is changed
   # config.send_password_change_notification = false
@@ -154,7 +166,11 @@ Devise.setup do |config|
 
   # ==> Configuration for :validatable
   # Range for password length.
+<<<<<<< HEAD
   config.password_length = 6..20
+=======
+  config.password_length = 6..128
+>>>>>>> login-dev-tmp
 
   # Email regex used to validate email formats. It simply asserts that
   # one (and only one) @ exists in the given string. This is mainly

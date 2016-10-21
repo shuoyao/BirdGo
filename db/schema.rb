@@ -11,10 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20161019055034) do
 
   create_table "users", force: :cascade do |t|
     t.string   "username"
+=======
+ActiveRecord::Schema.define(version: 20161020202212) do
+
+  create_table "users", force: :cascade do |t|
+>>>>>>> login-dev-tmp
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"

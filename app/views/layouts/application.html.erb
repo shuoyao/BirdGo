@@ -6,7 +6,14 @@
   <% end %>
 </div>
 
+<<<<<<< HEAD
 <%= yield :top_content %>
+=======
+<p class='flash'><%= flash[:notice] %></p>
+<p class='flash'><%= flash[:alert] %></p>
+
+<%= yield %>
+>>>>>>> login-dev-tmp
 
 <div class="container">
     <h1><%= yield :header %></h1>
