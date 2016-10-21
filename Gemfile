@@ -1,9 +1,13 @@
 source 'https://rubygems.org'
 
-ruby '>= 2.2.0'
+ruby '2.2.0'
 gem 'rails', '4.2.6'
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
+
+# This is for login system - Mingjian
+gem 'devise'
+gem 'turbolinks'
+gem 'bourbon'
+gem 'bootstrap-sass'
 
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
@@ -14,6 +18,7 @@ group :development, :test do
   gem 'launchy'
   gem 'rspec-rails', '3.4.2'
   gem 'ZenTest', '4.11.0'
+  gem 'selenium-webdriver'
 end
 
 group :test do
@@ -34,6 +39,7 @@ gem 'uglifier', '>= 2.7.1'
 
 gem 'jquery-rails'
 gem 'haml'
+gem 'gon'
 
 gem 'rubygems-bundler'
 gem 'rake', '>=11.3.0'
