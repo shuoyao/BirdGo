@@ -1,3 +1,3 @@
-Given(/^I click "Sign Up"$/) do
-  find('SIGN UP').click
-end
+# Given(/^I click "Sign Up"$/) do
+#   find('SIGN UP').click
+# end

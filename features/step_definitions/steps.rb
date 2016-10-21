@@ -26,3 +26,9 @@ Given /^I can see (a|.*) pin on the map$/ do |number|
   j = hidden_field.value.split("}, {")
   expect(j.length).to equal number
 end
+
+When /^within "(.*)", (?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |scope, field, value|
+  within(scope) do
+    fill_in(field, :with => value)
+  end
+end
