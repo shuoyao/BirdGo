@@ -15,3 +15,20 @@ Given /the following users exist:/ do |users_table|
     User.create(user)
   end
 end
+
+Given /^I can see (a|.*) pin on the map$/ do |number|
+  if number == "a"
+    number = 1
+  else
+    number = number.to_i
+  end
+  hidden_field = find :xpath, "//input[@id='search_result']"
+  j = hidden_field.value.split("}, {")
+  expect(j.length).to equal number
+end
+
+When /^within "(.*)", (?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |scope, field, value|
+  within(scope) do
+    fill_in(field, :with => value)
+  end
+end
