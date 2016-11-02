@@ -2,17 +2,21 @@
 
 = include_gon
 
-%html
+%html{:lang => "en"}
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    :css
-      #map {
-       height: 400px;
-       width: 100%;
-      }
+    %meta{:charset => "utf-8"}/
+    %title Search
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Open+Sans", :rel => "stylesheet"}/
   %body
-    %h3 My Google Maps Demo
-    %h3 Search:
+    %h1.align
+      .grid
+        %form.search{:form_tag => '/explore/search' }
+          .form__field
+            %input.form__input{:name => "search", :placeholder => "What are you looking for?", :type => "search", :text_field_tag => 'search'}/
+            %input.button{:type => "submit", :value => "Search", :submit_tag => 'Search'}/
+    %h2
     = form_tag '/explore/search' do
       = text_field_tag 'search'
       = submit_tag 'Search'

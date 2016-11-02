@@ -8,9 +8,9 @@ class ExploreController < ApplicationController
     
     
     def view
-        #Bird.delete_all
-        #Bird.create({:locationX => -25.363, :locationY => 131.044, :name => 'uluru'})
-        #Bird.create({:locationX => -5.363, :locationY => 131.044, :name => 'uluru2'})
+        Bird.delete_all
+        Bird.create({:locationX => -25.363, :locationY => 131.044, :name => 'bird1'})
+        Bird.create({:locationX => -5.363, :locationY => 131.044, :name => 'bird2'})
         if flash[:search_result] != nil
             @birds = flash[:search_result].as_json
         else
