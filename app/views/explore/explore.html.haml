@@ -14,7 +14,7 @@
       .grid
         %form.search{:form_tag => '/explore/search' }
           .form__field
-            %input.form__input{:name => "search", :placeholder => "What are you looking for?", :type => "search", :text_field_tag => 'search'}/
+            %input.form__input{:name => "search", :placeholder => "Enter the bird name here...", :type => "search", :text_field_tag => 'search'}/
             %input.button{:type => "submit", :value => "Search", :submit_tag => 'Search'}/
     %h2
     = form_tag '/explore/search' do
