@@ -48,19 +48,22 @@
   .tabs
     .tab
       %input#tab-1{:checked => "checked", :name => "tab-group-1", :type => "radio"}/
-      %label{:for => "tab-1"} Tab One
+      %label{:for => "tab-1"} Search
       .content
         stuff
     .tab
       %input#tab-2{:name => "tab-group-1", :type => "radio"}/
-      %label{:for => "tab-2"} Tab Two
+      %label{:for => "tab-2"} Wishlist
       .content
         stuff
     .tab
       %input#tab-3{:name => "tab-group-1", :type => "radio"}/
-      %label{:for => "tab-3"} Tab Three
+      %label{:for => "tab-3"} Setting
       .content
         stuff
 
 
 %input{:type =>"hidden", :value =>@birds, :id => "search_result"}
+
+
+// reference: https://css-tricks.com/functional-css-tabs-revisited/
