@@ -43,5 +43,24 @@
       }
     %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyAZAXAHxRrKlhRSya8IoRc2goYTuUi3ISE&callback=initMap"}
       :cdata
+      
+      
+  .tabs
+    .tab
+      %input#tab-1{:checked => "checked", :name => "tab-group-1", :type => "radio"}/
+      %label{:for => "tab-1"} Tab One
+      .content
+        stuff
+    .tab
+      %input#tab-2{:name => "tab-group-1", :type => "radio"}/
+      %label{:for => "tab-2"} Tab Two
+      .content
+        stuff
+    .tab
+      %input#tab-3{:name => "tab-group-1", :type => "radio"}/
+      %label{:for => "tab-3"} Tab Three
+      .content
+        stuff
+
 
 %input{:type =>"hidden", :value =>@birds, :id => "search_result"}
