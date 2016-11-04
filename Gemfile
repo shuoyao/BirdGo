@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.0'
+ruby '2.3.0'
 gem 'rails', '4.2.6'
 
 # This is for login system - Mingjian
@@ -25,9 +25,9 @@ group :test do
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
 end
-group :production do
-  gem 'pg'
-end
+#group :production do
+gem 'pg' #Previously in group production only
+#end
 
 # Gems used only for assets and not required
 # in production environments by default.

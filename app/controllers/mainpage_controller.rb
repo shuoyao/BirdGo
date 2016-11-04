@@ -5,8 +5,10 @@ class MainpageController < ActionController::Base
   def show
   	if user_signed_in?
   		puts "SUCCESS"
-  		sign_out current_user
-	end
-	redirect_to "/users/sign_in"
+  		#sign_out current_user
+  		redirect_to "/explore"
+	  else
+  	  redirect_to "/users/sign_in"
+  	end
   end
 end

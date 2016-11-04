@@ -11,12 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161021045155) do
+ActiveRecord::Schema.define(version: 20161102063052) do
 
   create_table "birds", force: :cascade do |t|
     t.string   "name"
-    t.float    "locationX"
-    t.float    "locationY"
     t.string   "wiki_link"
     t.datetime "last_seen"
     t.integer  "frequency"
@@ -24,14 +22,24 @@ ActiveRecord::Schema.define(version: 20161021045155) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "birds_wishlists", id: false, force: :cascade do |t|
+    t.integer "wishlist_id"
+    t.integer "bird_id"
+  end
+
+  add_index "birds_wishlists", ["bird_id"], name: "index_birds_wishlists_on_bird_id"
+  add_index "birds_wishlists", ["wishlist_id"], name: "index_birds_wishlists_on_wishlist_id"
+
+  create_table "pins", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "bird_id"
+    t.float    "locationX"
+    t.float    "locationY"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
-    t.string   "user_name"
-    t.string   "password"
-    t.string   "e_mails"
-    t.integer  "zip_code"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.boolean  "reserved"
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -42,9 +50,22 @@ ActiveRecord::Schema.define(version: 20161021045155) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+  create_table "wishlists", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.text     "bird_ids"
+    t.text     "seens"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "wishlists", ["user_id"], name: "index_wishlists_on_user_id"
 
 end

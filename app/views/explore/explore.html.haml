@@ -12,6 +12,13 @@
       }
   %body
     %h3 My Google Maps Demo
+    %h3 Wishlist Test:
+    - @wishlists.each do |wl|
+      %div
+      - for i in 0..wl.bird_ids.length-1
+        - bird = Bird.find_by_id(wl.bird_ids[i])
+        - seen = wl.seens[i]
+        %td= "#{bird.name} -> #{seen}, "
     %h3 Search:
     = form_tag '/explore/search' do
       = text_field_tag 'search'
