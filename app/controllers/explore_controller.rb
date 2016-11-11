@@ -1,17 +1,18 @@
 class ExploreController < ApplicationController
-    
-    def search
-        @search = params[:search] ? params[:search] : {}
-        bird = Bird.find_by_name(@search)
-        flash[:search_result] = Pin.where(bird_id: bird.id)
-        redirect_to explore_path
-    end
-    
-    
     def view
-        if flash[:search_result] != nil
-            @birds = flash[:search_result].as_json
+        search = params[:search] != "" ? params[:search] : nil
+        if search != nil
+            bird = Bird.where('name LIKE ?', "%#{search}%").first
+            search_result = bird ? Pin.where(bird_id: bird.id) : nil
+            if search_result != nil
+                flash[:alert] = ""
+                @birds = search_result.as_json
+            else
+                flash[:alert] = "No matching bird found!"
+                @birds = Pin.all.as_json
+            end
         else
+            flash[:alert] = ""
             @birds = Pin.all.as_json
         end
         if !(@birds.is_a? Array)

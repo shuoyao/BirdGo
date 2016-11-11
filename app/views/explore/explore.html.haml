@@ -2,16 +2,14 @@
 
 = include_gon
 
-%html
+%html{:lang => "en"}
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    :css
-      #map {
-       height: 400px;
-       width: 100%;
-      }
+    %meta{:charset => "utf-8"}/
+    %title Search
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Open+Sans", :rel => "stylesheet"}/
   %body
-    %h3 My Google Maps Demo
     %h3 Wishlist Test:
     - @wishlists.each do |wl|
       %div
@@ -19,11 +17,15 @@
         - bird = Bird.find_by_id(wl.bird_ids[i])
         - seen = wl.seens[i]
         %td= "#{bird.name} -> #{seen}, "
-    %h3 Search:
-    = form_tag '/explore/search' do
-      = text_field_tag 'search'
-      = submit_tag 'Search'
+    %h1.align
+      .grid
+        %form.search{:form_tag => '/explore/search' }
+          .form__field
+            %input.form__input{:name => "search", :placeholder => "Enter the bird name here...", :type => "search", :text_field_tag => 'search'}/
+            %input.button{:type => "submit", :value => "Search", :submit_tag => 'Search'}/
     #map
+    - if flash[:alert] != ""
+      %h3= flash[:alert] 
     :javascript
       $('#search_result').reset();
       function initMap() {
@@ -46,5 +48,27 @@
       }
     %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyAZAXAHxRrKlhRSya8IoRc2goYTuUi3ISE&callback=initMap"}
       :cdata
+      
+      
+  .tabs
+    .tab
+      %input#tab-1{:checked => "checked", :name => "tab-group-1", :type => "radio"}/
+      %label{:for => "tab-1"} Search
+      .content
+        stuff
+    .tab
+      %input#tab-2{:name => "tab-group-1", :type => "radio"}/
+      %label{:for => "tab-2"} Wishlist
+      .content
+        stuff
+    .tab
+      %input#tab-3{:name => "tab-group-1", :type => "radio"}/
+      %label{:for => "tab-3"} Setting
+      .content
+        stuff
+
 
 %input{:type =>"hidden", :value =>@birds, :id => "search_result"}
+
+
+// reference: https://css-tricks.com/functional-css-tabs-revisited/
