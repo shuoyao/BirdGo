@@ -18,7 +18,8 @@ class ExploreController < ApplicationController
         if !(@birds.is_a? Array)
             @birds = [@birds]
         end
-        gon.birds = @birds
+        gon.pins = @birds
+        gon.birds = Bird.all.as_json
         @wishlists = []
         current_user.wishlist_ids.each do |id|
             @wishlists.push(Wishlist.find_by_id(id))
