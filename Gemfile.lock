@@ -231,7 +231,7 @@ PLATFORMS
 
 DEPENDENCIES
   ZenTest (= 4.11.0)
-  bootstrap-sass
+  bootstrap-sass (~> 3.3.6)
   bourbon
   byebug
   capybara (= 2.4.4)
