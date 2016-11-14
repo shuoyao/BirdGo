@@ -19,8 +19,8 @@
     //     %td= "#{bird.name} -> #{seen}, "
     %form.navbar-form.navbar-left
       .form-group
-        %input.form-control{:name => "search", :placeholder => "Enter the bird name here...", :text_field_tag => "search", :type => "search"}/
-      %button.btn.btn-default{:type => "submit", :value => "search", :submit_tag => "submit"} Hello
+        %input.form-control{:name => "search", :placeholder => "Enter the bird name here..."}/
+      %button.btn.btn-default{:type => "submit"} Search
     #map
     - if flash[:alert] != ""
       %h3= flash[:alert] 
@@ -80,23 +80,6 @@
       :cdata
       
       
-  .tabs
-    .tab
-      %input#tab-1{:checked => "checked", :name => "tab-group-1", :type => "radio"}/
-      %label{:for => "tab-1"} Search
-      .content
-        stuff
-    .tab
-      %input#tab-2{:name => "tab-group-1", :type => "radio"}/
-      %label{:for => "tab-2"} Wishlist
-      .content
-        stuff
-    .tab
-      %input#tab-3{:name => "tab-group-1", :type => "radio"}/
-      %label{:for => "tab-3"} Setting
-      .content
-        stuff
-
 
 %ul.nav.nav-tabs
   %li.active{:role => "presentation"}
