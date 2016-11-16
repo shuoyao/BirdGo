@@ -4,59 +4,25 @@
 
 %html{:lang => "en"}
   %head
+
+    
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %meta{:charset => "utf-8"}/
     %title Search
     %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
     %link{:href => "https://fonts.googleapis.com/css?family=Open+Sans", :rel => "stylesheet"}/
+    %link{:href=>"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"}
   %body
-    %nav.navbar.navbar-default.sidebar{:role => "navigation"}
-      .container-fluid
-        .navbar-header
-          %button.navbar-toggle{"data-target" => "#bs-sidebar-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
-            %span.sr-only Toggle navigation
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-        #bs-sidebar-navbar-collapse-1.collapse.navbar-collapse
-          %ul.nav.navbar-nav
-            %li.active
-              %a{:href => "#"}
-                Home
-                %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-home{:style => "font-size:16px;"}
-            %li.dropdown
-              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-                Usuarios
-                %span.caret
-                %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-user{:style => "font-size:16px;"}
-              %ul.dropdown-menu.forAnimate{:role => "menu"}
-                %li
-                  %a{:href => "{{URL::to('createusuario')}}"} Crear
-                %li
-                  %a{:href => "#"} Modificar
-                %li
-                  %a{:href => "#"} Reportar
-                %li.divider
-                %li
-                  %a{:href => "#"} Separated link
-                %li.divider
-                %li
-                  %a{:href => "#"} Informes
-            %li
-              %a{:href => "#"}
-                Libros
-                %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-th-list{:style => "font-size:16px;"}
-            %li
-              %a{:href => "#"}
-                Tags
-                %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-tags{:style => "font-size:16px;"}
-
-    %form.navbar-form.navbar-fixed-top
-      %a.btn.btn-info.btn-sm{:href => "#"}
-        %span.glyphicon.glyphicon-menu-hamburger
-      .form-group
-        %input.form-control{:name => "search", :placeholder => "Enter the bird name"}/
-      %button.btn.btn-default{:type => "submit"} Search
+    .navbar-fixed-top.container
+      .navbar
+        .navbar-inner
+          %form
+            .row
+              %a.btn.btn-info.btn-sm.col-xs-1{:href => "#"}
+                %span.glyphicon.glyphicon-menu-hamburger
+              .form-group.col-xs-10
+                %input.form-control{:name => "search", :placeholder => "Enter the bird name"}/
+              %button.btn.btn-default.col-xs-1{:type => "submit"} Search
     #map
     - if flash[:alert] != ""
       %h3= flash[:alert] 
@@ -115,28 +81,6 @@
     %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyAZAXAHxRrKlhRSya8IoRc2goYTuUi3ISE&callback=initMap"}
       :cdata
 
-
-// %nav.navbar.navbar-inverse.navbar-fixed-top
-//   .navbar-header
-//     %a.navbar-brand{:href => "#"} Brand
-//     %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
-//       %span.icon-bar
-//       %span.icon-bar
-//       %span.icon-bar
-//   .navbar-collapse.collapse
-//     %ul.nav.navbar-nav
-//       %li.active
-//         %a{:href => "#"} Home
-//       %li
-//         %a{:href => "#about"} About
-//       %li
-//         %a{:href => "#contact"} Contact
-//     .navbar-header.navbar-right
-//       %p.navbar-text
-//         %a.navbar-link{:href => "#"} Username
-    
-      
-
 %ul.nav.nav-tabs
   %li.active{:role => "presentation"}
     %a{:href => "#"} Home
@@ -144,14 +88,6 @@
     %a{:href => "#"} Profile
   %li{:role => "presentation"}
     %a{:href => "#"} Messages
-
-    %h3 Wishlist Test:
-    - @wishlists.each do |wl|
-      %div
-      - for i in 0..wl.bird_ids.length-1
-        - bird = Bird.find_by_id(wl.bird_ids[i])
-        - seen = wl.seens[i]
-        %td= "#{bird.name} -> #{seen}, "
 
 %input{:type =>"hidden", :value =>@birds, :id => "search_result"}
 
