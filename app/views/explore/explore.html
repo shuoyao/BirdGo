@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+    <meta charset='utf-8'>
+    <title>Search</title>
+    <meta content='width=device-width, initial-scale=1' name='viewport'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+    <link href='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand hidden-xs" href="#">CompAny</a>
+          <a class="navbar-brand visible-xs" href="#">C</a>
+          <form class="navbar-form pull-left" role="search">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search">
+              <div class="input-group-btn">
+                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">Browse Courses</a></li>
+            <li><a href="#contact">Active Courses</a></li>
+          </ul>
+        </div>
+        <!--/.navbar-collapse -->
+      </div>
+    </div>
+    <div id='map'></div>
+    <script>
+      $('#search_result').reset();
+      function initMap() {
+        var birds = [];
+        for (var i = 0; i < gon.pins.length; i++) {
+          bird = gon.pins[i];
+          birds.push({lat: bird.locationX, lng: bird.locationY});
+        }
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: birds[0]
+        });
+        for (var i = 0; i < birds.length; i++) {
+          pin = gon.pins[i];
+          var pin1 = birds[i];
+          bird = null;
+          for (var j = 0; j < gon.birds.length; j++) {
+            if (gon.birds[j].id == pin.bird_id) {
+              bird = gon.birds[j];
+            }
+          }
+          contentString = '<div id="content">'+
+             '<div id="siteNotice">'+
+             '</div>' + '<div id="bodyContent">'+
+             '<p><b>'
+              + bird.name
+             + '</b></p><p>'
+            + "Last Seen: " + bird.last_seen + '</p><p>'
+            + "Total Seen: " + bird.frequency
+             + '</p>'+
+             '<p>Link: <a href=' + bird.wiki_link + '>'
+             + bird.wiki_link + '</a>'+
+             '</p>'+
+            '</div>'+
+            '</div>';
+      
+          var infowindow = new google.maps.InfoWindow({
+            content: 'bullshit'
+          });
+          var marker = new google.maps.Marker({
+            position: pin1,
+            map: map
+          });
+          
+          marker.contentString = contentString;
+      
+          marker.addListener('click', function() {
+            infowindow.setContent(this.contentString);
+            infowindow.open(map, this);
+          });
+        }
+      }
+    </script>
+    <script async='' defer='defer' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAZAXAHxRrKlhRSya8IoRc2goYTuUi3ISE&amp;callback=initMap'>
+      <![CDATA[
+      ]]>
+    </script>
+  </body>
+</html>
+<!-- / reference: https://css-tricks.com/functional-css-tabs-revisited/ -->
+<!-- / reference of menu: http://bootsnipp.com/snippets/featured/side-menu-on-hover -->
