@@ -36,7 +36,6 @@
 }
 
 
-
 html,body
 {
     height:100%;
@@ -46,17 +45,14 @@ body
 {
     display:table;
 }
-.navbar navbar-inverse navbar-fixed-top, #map
+.navbar
 {
     width: 100%;
     background: yellow;
     display:table-row;
 
 }
-.navbar navbar-inverse navbar-fixed-top
-{
-    height: 50px;
-}
+
 #map
 {
     height:100%;  
