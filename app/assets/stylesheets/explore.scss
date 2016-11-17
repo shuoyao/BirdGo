@@ -5,9 +5,10 @@
 #map{
     margin:0;
     padding:0;
-    height: 80%;
+    height: 86%;
     width: 100%;
-    margin-top:10%;
+    margin-top:5%;
+    //margin-bottom:5%;
 }
 
 
@@ -34,3 +35,29 @@
     box-shadow: none;
 }
 
+
+
+html,body
+{
+    height:100%;
+    width:100%;
+}
+body
+{
+    display:table;
+}
+.navbar navbar-inverse navbar-fixed-top, #map
+{
+    width: 100%;
+    background: yellow;
+    display:table-row;
+
+}
+.navbar navbar-inverse navbar-fixed-top
+{
+    height: 50px;
+}
+#map
+{
+    height:100%;  
+}

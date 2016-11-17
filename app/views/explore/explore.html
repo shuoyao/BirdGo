@@ -62,7 +62,14 @@
         }
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 4,
-          center: birds[0]
+          center: birds[0],
+          disableDefaultUI: true,
+          zoomControl: true,
+          mapTypeControl: false
+          // scaleControl: true,
+          // streetViewControl: false,
+          // rotateControl: false,
+          // fullscreenControl: false;
         });
         for (var i = 0; i < birds.length; i++) {
           pin = gon.pins[i];
