@@ -10,23 +10,36 @@
     <link href="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></link>
   </head>
   <body>
-    <div class="navbar-fixed-top container">
-      <div class="navbar">
-        <div class="navbar-inner">
-          <form>
-            <div class="row">
-              <a class="btn btn-info btn-sm col-xs-1" href="#">
-                <span class="glyphicon glyphicon-menu-hamburger"></span>
-              </a>
-              <div class="form-group col-xs-10">
-                <input class="form-control" name="search" placeholder="Enter the bird name">/</input>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+     <div class="container">
+        <div class="navbar-header">
+           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           </button>
+           <a class="navbar-brand hidden-xs" href="#">CompAny</a>
+           <a class="navbar-brand visible-xs" href="#">C</a>
+           <form class="navbar-form pull-left" role="search">
+              <div class="input-group">
+                 <input type="text" class="form-control" placeholder="Search">
+                 <div class="input-group-btn">
+                    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                 </div>
               </div>
-              <button class="btn btn-default col-xs-1" type="submit">Search</button>
-            </div>
-          </form>
+           </form>
         </div>
-      </div>
-    </div>
+        <div class="navbar-collapse collapse">
+           <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">Browse Courses</a></li>
+              <li><a href="#contact">Active Courses</a></li>
+           </ul>
+        </div>
+        <!--/.navbar-collapse -->
+     </div>
+  </div>
+  
     <div id="map"></div>
     <% if flash[:alert] != "" %>
       <h3>
