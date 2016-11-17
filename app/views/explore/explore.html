@@ -1,45 +1,40 @@
-<!DOCTYPE html>
-<html lang='en'>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%= include_gon %>
+<html lang="en">
   <head>
-    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
-    <meta charset='utf-8'>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <meta charset="utf-8"/>
     <title>Search</title>
-    <meta content='width=device-width, initial-scale=1' name='viewport'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
-    <link href='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">/</link>
+    <link href="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></link>
   </head>
   <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand hidden-xs" href="#">CompAny</a>
-          <a class="navbar-brand visible-xs" href="#">C</a>
-          <form class="navbar-form pull-left" role="search">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search">
-              <div class="input-group-btn">
-                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+    <div class="navbar-fixed-top container">
+      <div class="navbar">
+        <div class="navbar-inner">
+          <form>
+            <div class="row">
+              <a class="btn btn-info btn-sm col-xs-1" href="#">
+                <span class="glyphicon glyphicon-menu-hamburger"></span>
+              </a>
+              <div class="form-group col-xs-10">
+                <input class="form-control" name="search" placeholder="Enter the bird name">/</input>
               </div>
+              <button class="btn btn-default col-xs-1" type="submit">Search</button>
             </div>
           </form>
         </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">Browse Courses</a></li>
-            <li><a href="#contact">Active Courses</a></li>
-          </ul>
-        </div>
-        <!--/.navbar-collapse -->
       </div>
     </div>
-    <div id='map'></div>
+    <div id="map"></div>
+    <% if flash[:alert] != "" %>
+      <h3>
+        <%= flash[:alert]  %>
+      </h3>
+    <% end %>
     <script>
+      
       $('#search_result').reset();
       function initMap() {
         var birds = [];
@@ -74,7 +69,6 @@
              '</p>'+
             '</div>'+
             '</div>';
-      
           var infowindow = new google.maps.InfoWindow({
             content: 'bullshit'
           });
@@ -84,19 +78,32 @@
           });
           
           marker.contentString = contentString;
-      
           marker.addListener('click', function() {
             infowindow.setContent(this.contentString);
             infowindow.open(map, this);
           });
         }
       }
+
     </script>
-    <script async='' defer='defer' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAZAXAHxRrKlhRSya8IoRc2goYTuUi3ISE&amp;callback=initMap'>
-      <![CDATA[
-      ]]>
+    <script defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZAXAHxRrKlhRSya8IoRc2goYTuUi3ISE&callback=initMap">
+      <cdata>
+        
+
+
+      </cdata>
     </script>
   </body>
 </html>
-<!-- / reference: https://css-tricks.com/functional-css-tabs-revisited/ -->
-<!-- / reference of menu: http://bootsnipp.com/snippets/featured/side-menu-on-hover -->
+<ul class="nav nav-tabs">
+  <li class="active" role="presentation">
+    <a href="#">Home</a>
+  </li>
+  <li role="presentation">
+    <a href="#">Profile</a>
+  </li>
+  <li role="presentation">
+    <a href="#">Messages</a>
+  </li>
+</ul>
+<input id="search_result" type="hidden" value="<%= @birds %>"></input>
