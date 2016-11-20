@@ -1,0 +1,41 @@
+%nav.navbar.navbar-default.sidebar{:role => "navigation"}
+  .container-fluid
+    .navbar-header
+      %button.navbar-toggle{"data-target" => "#bs-sidebar-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+    
+    #bs-sidebar-navbar-collapse-1.collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        %li.active
+          %a{:href => "#"}
+            Home
+            %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-home{:style => "font-size:16px;"}
+        %li.dropdown
+          %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+            Usuarios
+            %span.caret
+            %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-user{:style => "font-size:16px;"}
+          %ul.dropdown-menu.forAnimate{:role => "menu"}
+            %li
+              %a{:href => "{{URL::to('createusuario')}}"} Crear
+            %li
+              %a{:href => "#"} Modificar
+            %li
+              %a{:href => "#"} Reportar
+            %li.divider
+            %li
+              %a{:href => "#"} Separated link
+            %li.divider
+            %li
+              %a{:href => "#"} Informes
+        %li
+          %a{:href => "#"}
+            Libros
+            %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-th-list{:style => "font-size:16px;"}
+        %li
+          %a{:href => "#"}
+            Tags
+            %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-tags{:style => "font-size:16px;"}
