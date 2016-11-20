@@ -19,7 +19,7 @@ html, body {
 .flickity-viewport {
   overflow: hidden;
   position: relative;
-  height: 100%;
+  height: 100% !important;
 }
 
 .flickity-slider {
@@ -157,6 +157,12 @@ body { font-family: sans-serif; }
   background: #8C8;
   counter-increment: gallery-cell;
 }
+
+.js-flickity{
+  height: 80%;
+}
+
+
 
 /* cell number */
 .gallery-cell:before {
