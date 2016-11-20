@@ -5,7 +5,7 @@ body { font-family: sans-serif; }
 
 .carousel {
   background: #EEE;
-   height: 80%;
+  height: 80%;
 }
 
 .carousel img {
@@ -36,13 +36,20 @@ html, body {
 
 
 .btn-lg{
-  margin-top: 10%;
-  // height: 80px !important;
-  vertical-align: middle !important;
-  display: table-cell;
+  margin-top: 5%;
+
 }
 
 #customized-btn {
-   padding: 40px; 
-   font-size: 45px;
+  padding: 40px; 
+  font-size: 45px;
 }
+
+#customized-guest {
+  // padding: 40px; 
+  // padding-top: 10px;
+  font-size: 30px;
+  padding: 40px; 
+  margin-top: 30px;
+}
+
