@@ -37,4 +37,12 @@ html, body {
 
 .btn-lg{
   margin-top: 10%;
+  // height: 80px !important;
+  vertical-align: middle !important;
+  display: table-cell;
+}
+
+#customized-btn {
+   padding: 40px; 
+   font-size: 45px;
 }
