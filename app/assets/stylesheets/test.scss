@@ -175,38 +175,26 @@
 // }
 
 
-/* external css: flickity.css */
-
 * { box-sizing: border-box; }
 
 body { font-family: sans-serif; }
 
 .carousel {
-  background: #FAFAFA;
-  height: 80%;
+  background: #EEE;
+   height: 80%;
 }
 
-.carousel-cell {
-  width: 66%;
-  height: 100%;
-  margin-right: 10px;
-  background: #333;
-}
-
-.carousel-cell-image {
+.carousel img {
   display: block;
-  max-height: 100%;
-  margin: 0 auto;
-  max-width: 100%;
-  opacity: 0;
-  -webkit-transition: opacity 0.4s;
-          transition: opacity 0.4s;
+//   height: 400px;
+  height: 100%;
 }
 
-/* fade in lazy loaded image */
-.carousel-cell-image.flickity-lazyloaded,
-.carousel-cell-image.flickity-lazyerror {
-  opacity: 1;
+@media screen and ( min-width: 768px ) {
+  .carousel img {
+    // height: 800px;
+    height: 100%;
+  }
 }
 
 html, body { 
