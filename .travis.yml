@@ -4,7 +4,7 @@ rvm:
  - jruby
  - rbx-2
 before_install:
- - rvm install ruby -v 2.2.0p0
+ - rvm install ruby -v 2.3.0p0
  #- rvm install binary
 # uncomment and edit the following line if your project needs to run something other than `rake`:
 # script: bundle exec rspec spec
