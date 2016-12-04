@@ -1,7 +1,6 @@
 language: ruby
 rvm:
  - 2.1
- - jruby
 before_install:
  - rvm install ruby-2.3.0
  - rvm use ruby-2.3.0
