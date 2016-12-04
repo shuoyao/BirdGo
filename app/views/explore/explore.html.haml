@@ -9,8 +9,42 @@
     %title Search
     %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
     %link{:href => "https://fonts.googleapis.com/css?family=Open+Sans", :rel => "stylesheet"}/
+    
+    %link{:crossorigin => "anonymous", :href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", :integrity => "sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u", :rel => "stylesheet"}/
+    / Optional theme
+    %link{:crossorigin => "anonymous", :href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css", :integrity => "sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp", :rel => "stylesheet"}/
+    / Latest compiled and minified JavaScript
+    %script{:crossorigin => "anonymous", :integrity => "sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa", :src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"}
   %body
     = link_to("Log out", {:action => "logout"}, {:id => "Log out"})
+    
+    .navbar.navbar-inverse.navbar-fixed-top
+      .container
+        .navbar-header
+          %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.navbar-brand.hidden-xs{:href => "#"} BirdGo
+          %a.navbar-brand.visible-xs{:href => "#"} BirdGo
+          %form.navbar-form.pull-left{:role => "search"}
+            .input-group
+              %input.form-control{:name => "search", :placeholder => "Search", :type => "text"}/
+              .input-group-btn
+                %button.btn.btn-default{:type => "submit"}
+                  %span.glyphicon.glyphicon-search
+        .navbar-collapse.collapse
+          %ul.nav.navbar-nav.navbar-right
+            %li.active
+              %a{:href => "#"} Explore
+            %li
+              %a{:href => "#"} Profile
+            %li
+              %a{:href => "#"} Wish List
+            %li
+              %a{:href => "#"} Observed
+            %li
+              %a{:href => "#"} Log Out
     %h3 Wishlist Test:
     - @wishlists.each do |wl|
       %div
