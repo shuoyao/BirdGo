@@ -63,6 +63,15 @@
             '</div>'+
             '</div>';
 
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+              var pos = {lat: position.coords.latitude, lng: position.coords.longitude};
+              map.setCenter(pos);
+            });
+          } else {
+            alert("Location requisition banned by browser!");
+          }
+
           var infowindow = new google.maps.InfoWindow({
             content: 'bullshit'
           });
