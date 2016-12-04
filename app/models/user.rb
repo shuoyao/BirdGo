@@ -4,4 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, 
          :recoverable, :rememberable, :trackable, :validatable
   has_many :wishlists
+  
+  def get_id()
+    return self.id
+  end
 end
