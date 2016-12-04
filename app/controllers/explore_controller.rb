@@ -1,5 +1,6 @@
 class ExploreController < ApplicationController
     def view
+        puts "search param is #{params}"
         search = params[:search] != "" ? params[:search] : nil
         if search != nil
             bird = Bird.where('name LIKE ?', "%#{search}%").first
