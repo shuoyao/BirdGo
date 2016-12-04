@@ -549,3 +549,36 @@ Processing by ExploreController#view as HTML
   [1m[35mBird Load (0.1ms)[0m  SELECT  "birds".* FROM "birds" WHERE "birds"."id" = ? LIMIT 1  [["id", 4]]
   Rendered explore/explore.html.haml within layouts/application (34.8ms)
 Completed 200 OK in 289ms (Views: 231.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 136.152.142.53 at 2016-12-04 23:32:05 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/main" for 136.152.142.53 at 2016-12-04 23:32:06 +0000
+Processing by MainpageController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Redirected to https://cs169-workspace-andrewbxy.c9users.io/explore
+Completed 302 Found in 27ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/explore" for 136.152.142.53 at 2016-12-04 23:32:06 +0000
+Processing by ExploreController#view as HTML
+  [1m[36mPin Load (0.3ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mBird Load (0.1ms)[0m  SELECT "birds".* FROM "birds"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?  [["user_id", 1]]
+  [1m[36mWishlist Load (0.2ms)[0m  [1mSELECT  "wishlists".* FROM "wishlists" WHERE "wishlists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mWishlist Load (0.1ms)[0m  SELECT  "wishlists".* FROM "wishlists" WHERE "wishlists"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "birds".id FROM "birds" INNER JOIN "birds_wishlists" ON "birds"."id" = "birds_wishlists"."bird_id" WHERE "birds_wishlists"."wishlist_id" = ?[0m  [["wishlist_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "birds".id FROM "birds" INNER JOIN "birds_wishlists" ON "birds"."id" = "birds_wishlists"."bird_id" WHERE "birds_wishlists"."wishlist_id" = ?  [["wishlist_id", 1]]
+  [1m[36mBird Load (0.1ms)[0m  [1mSELECT  "birds".* FROM "birds" WHERE "birds"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "birds".id FROM "birds" INNER JOIN "birds_wishlists" ON "birds"."id" = "birds_wishlists"."bird_id" WHERE "birds_wishlists"."wishlist_id" = ?  [["wishlist_id", 1]]
+  [1m[36mBird Load (0.1ms)[0m  [1mSELECT  "birds".* FROM "birds" WHERE "birds"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT "birds".id FROM "birds" INNER JOIN "birds_wishlists" ON "birds"."id" = "birds_wishlists"."bird_id" WHERE "birds_wishlists"."wishlist_id" = ?  [["wishlist_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "birds".id FROM "birds" INNER JOIN "birds_wishlists" ON "birds"."id" = "birds_wishlists"."bird_id" WHERE "birds_wishlists"."wishlist_id" = ?[0m  [["wishlist_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "birds".* FROM "birds" WHERE "birds"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "birds".id FROM "birds" INNER JOIN "birds_wishlists" ON "birds"."id" = "birds_wishlists"."bird_id" WHERE "birds_wishlists"."wishlist_id" = ?[0m  [["wishlist_id", 2]]
+  [1m[35mBird Load (0.1ms)[0m  SELECT  "birds".* FROM "birds" WHERE "birds"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered explore/explore.html.haml within layouts/application (156.2ms)
+Completed 200 OK in 655ms (Views: 601.1ms | ActiveRecord: 2.3ms)
