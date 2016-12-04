@@ -1,5 +1,6 @@
 class ExploreController < ApplicationController
     def view
+        puts "search param is #{params}"
         search = params[:search] != "" ? params[:search] : nil
         if search != nil
             bird = Bird.where('name LIKE ?', "%#{search}%").first
@@ -25,6 +26,11 @@ class ExploreController < ApplicationController
             @wishlists.push(Wishlist.find_by_id(id))
         end
    	    render "explore.html"
+   	end
+   	
+   	def logout
+   	    sign_out current_user
+   	    redirect_to "/"
    	end
 end
 

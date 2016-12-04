@@ -231,7 +231,7 @@ PLATFORMS
 
 DEPENDENCIES
   ZenTest (= 4.11.0)
-  bootstrap-sass
+  bootstrap-sass (~> 3.3.6)
   bourbon
   byebug
   capybara (= 2.4.4)
@@ -255,3 +255,9 @@ DEPENDENCIES
   sqlite3
   turbolinks
   uglifier (>= 2.7.1)
+
+RUBY VERSION
+   ruby 2.3.0p0
+
+BUNDLED WITH
+   1.13.4

@@ -19,13 +19,6 @@ module NavigationHelpers
     # when /^detail\"(.*)"s?page$/
     # when /^the detail page for "(.*)"$/i
     
-    
-    when /^the detail\s?page$/
-      print page.body
-      '/detail/1'
-    # movie_path(Movie.find_by_title($1))
-    
-  
 
     
     when /^the Birdgo map page$/
