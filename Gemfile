@@ -7,7 +7,7 @@ gem 'rails', '4.2.6'
 gem 'devise'
 gem 'turbolinks'
 gem 'bourbon'
-# gem 'bootstrap-sass'
+gem 'bootstrap-sass'
 
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
@@ -43,13 +43,6 @@ gem 'gon'
 
 gem 'rubygems-bundler'
 gem 'rake', '>=11.3.0'
-
-gem 'turbolinks'
-gem 'launchy'
-
-# for bootstrap
-gem 'bootstrap-sass', '~> 3.3.6'
-
 
 # Use unicorn as the web server
 # gem 'unicorn'
