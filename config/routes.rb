@@ -55,6 +55,7 @@ Rails.application.routes.draw do
   get '/wishlist/:id/add' => 'wishlist#add'
   get '/wishlist/:id/remove' => 'wishlist#remove'
   get '/observed/see' => 'observed#see'
+  get '/intro' => 'intro#show'
 
   get '/main', to: 'mainpage#show', as: 'mainpage'
   devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations' }
