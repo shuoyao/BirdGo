@@ -4,7 +4,7 @@ function initMap() {
     return;
   }
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 4,
+    zoom: 13,
     center: {lng: document.lng, lat: document.lat}
   });
   map.markerArray = [];
@@ -21,6 +21,17 @@ function initMap() {
   time = 30
   url = "/eBirdData/NearestBirds?lng=" + lng + "&lat=" + lat + "&r=" + radius + "&t=" + time
   fetchDataAtLocationAndShow(url)
+  
+  map.addListener('dragend', function(e) {
+    center = map.getCenter()
+    lng = center.lng()
+    lat = center.lat()
+    radius = 10
+    time = 30
+    url = "/eBirdData/NearestBirds?lng=" + lng + "&lat=" + lat + "&r=" + radius + "&t=" + time
+    fetchDataAtLocationAndShow(url)
+    }
+  );
     
   //   contentString = '<div id="content">'+
   //      '<div id="siteNotice">'+
