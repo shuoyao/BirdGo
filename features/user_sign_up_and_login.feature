@@ -24,7 +24,7 @@ Scenario: User sign up successfully
 Scenario: Successfully login in
 	When I press "Create Account"
 	Then I should see "success"
-	And I follow "Log out"
+	And I follow "Log Out"
 	Given I am on the login page
     And I follow "LOGIN"
     When within ".lgm-2", I fill in "user_email" with "fakeyo@gmail.com"
