@@ -25,9 +25,9 @@ group :test do
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
 end
-#group :production do
-gem 'pg' #Previously in group production only
-#end
+group :production do
+  gem 'pg'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.

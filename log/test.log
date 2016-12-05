@@ -1,0 +1,1594 @@
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:36:38 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (139.4ms)
+Completed 200 OK in 175ms (Views: 152.4ms | ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:36:39 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:36:39 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:36:39 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.2ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-12-04 23:36:39 +0000
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"fakeyo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'fakeyo@gmail.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "fakeyo@gmail.com"], ["encrypted_password", "$2a$04$.y/3CSGbx/5GMo8alGyg7.K887YfNYcyqIN390/TAEo8vNkAf0w9."], ["created_at", "2016-12-04 23:36:39.223341"], ["updated_at", "2016-12-04 23:36:39.223341"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-12-04 23:36:39.226116"], ["current_sign_in_at", "2016-12-04 23:36:39.226116"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-12-04 23:36:39.226719"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 47ms (ActiveRecord: 1.1ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:36:39 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:36:39 +0000
+Processing by MainpageController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Redirected to http://www.example.com/explore
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+Started GET "/explore" for 127.0.0.1 at 2016-12-04 23:36:39 +0000
+Processing by ExploreController#view as HTML
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mBird Load (0.1ms)[0m  SELECT "birds".* FROM "birds"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (12.5ms)
+Completed 200 OK in 171ms (Views: 17.9ms | ActiveRecord: 0.9ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "birds" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Im so Cool"], ["created_at", "2016-12-04 23:36:39.431462"], ["updated_at", "2016-12-04 23:36:39.431462"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "birds" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Im cooler"], ["created_at", "2016-12-04 23:36:39.433508"], ["updated_at", "2016-12-04 23:36:39.433508"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "birds" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Im cooler"], ["created_at", "2016-12-04 23:36:39.434909"], ["updated_at", "2016-12-04 23:36:39.434909"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "birds" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Coolest"], ["created_at", "2016-12-04 23:36:39.436381"], ["updated_at", "2016-12-04 23:36:39.436381"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "birds" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Zeus"], ["created_at", "2016-12-04 23:36:39.437857"], ["updated_at", "2016-12-04 23:36:39.437857"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/explore" for 127.0.0.1 at 2016-12-04 23:36:39 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mPin Load (0.1ms)[0m  SELECT "pins".* FROM "pins"
+  [1m[36mBird Load (0.1ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 7ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+Started GET "/explore?search=Im+cooler" for 127.0.0.1 at 2016-12-04 23:36:39 +0000
+Processing by ExploreController#view as HTML
+  Parameters: {"search"=>"Im cooler"}
+  [1m[35mBird Load (0.1ms)[0m  SELECT  "birds".* FROM "birds" WHERE (name LIKE '%Im cooler%')  ORDER BY "birds"."id" ASC LIMIT 1
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins" WHERE "pins"."bird_id" = ?[0m  [["bird_id", 2]]
+  [1m[35mBird Load (0.1ms)[0m  SELECT "birds".* FROM "birds"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 132ms (Views: 2.8ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:36:39 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.3ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:36:39 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:36:39 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:36:39 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.2ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-12-04 23:36:39 +0000
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"fakeyo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'fakeyo@gmail.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "fakeyo@gmail.com"], ["encrypted_password", "$2a$04$z4ZFFzZ9L36hGC5evnFQO.xmwTjMFMnjegIBk/s9k6CyDNXyIYw9C"], ["created_at", "2016-12-04 23:36:39.642329"], ["updated_at", "2016-12-04 23:36:39.642329"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-12-04 23:36:39.644299"], ["current_sign_in_at", "2016-12-04 23:36:39.644299"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-12-04 23:36:39.644837"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 10ms (ActiveRecord: 0.9ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:36:39 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:36:39 +0000
+Processing by MainpageController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Redirected to http://www.example.com/explore
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+Started GET "/explore" for 127.0.0.1 at 2016-12-04 23:36:39 +0000
+Processing by ExploreController#view as HTML
+  [1m[36mPin Load (0.2ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mBird Load (128.5ms)[0m  SELECT "birds".* FROM "birds"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 135ms (Views: 2.2ms | ActiveRecord: 128.9ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "birds" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "wigeon"], ["created_at", "2016-12-04 23:36:39.793614"], ["updated_at", "2016-12-04 23:36:39.793614"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "birds" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "duck"], ["created_at", "2016-12-04 23:36:39.795338"], ["updated_at", "2016-12-04 23:36:39.795338"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mBird Load (0.1ms)[0m  [1mSELECT  "birds".* FROM "birds" WHERE "birds"."name" = ? LIMIT 1[0m  [["name", "wigeon"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "pins" ("name", "bird_id", "locationX", "locationY", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "alpha"], ["bird_id", 1], ["locationX", 36.0], ["locationY", -119.0], ["created_at", "2016-12-04 23:36:39.808929"], ["updated_at", "2016-12-04 23:36:39.808929"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mBird Load (0.0ms)[0m  [1mSELECT  "birds".* FROM "birds" WHERE "birds"."name" = ? LIMIT 1[0m  [["name", "duck"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "pins" ("name", "bird_id", "locationX", "locationY", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "beta"], ["bird_id", 2], ["locationX", 39.0], ["locationY", -132.0], ["created_at", "2016-12-04 23:36:39.811284"], ["updated_at", "2016-12-04 23:36:39.811284"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/explore" for 127.0.0.1 at 2016-12-04 23:36:39 +0000
+Processing by ExploreController#view as HTML
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mBird Load (0.1ms)[0m  SELECT "birds".* FROM "birds"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 7ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:36:39 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.4ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:36:39 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:36:39 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:36:39 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (132.3ms)
+Completed 200 OK in 134ms (Views: 133.6ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-12-04 23:36:39 +0000
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"fakeyo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'fakeyo@gmail.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "fakeyo@gmail.com"], ["encrypted_password", "$2a$04$WFDMvyzJVevs8S4b2ONkSOo8AdPaLSk86gWQ4Tfi9tEygEO7ao1wC"], ["created_at", "2016-12-04 23:36:40.004236"], ["updated_at", "2016-12-04 23:36:40.004236"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-12-04 23:36:40.006203"], ["current_sign_in_at", "2016-12-04 23:36:40.006203"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-12-04 23:36:40.006812"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 9ms (ActiveRecord: 0.9ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Processing by MainpageController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Redirected to http://www.example.com/explore
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+Started GET "/explore" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Processing by ExploreController#view as HTML
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mBird Load (0.1ms)[0m  SELECT "birds".* FROM "birds"
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "birds" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "wigeon"], ["created_at", "2016-12-04 23:36:40.023194"], ["updated_at", "2016-12-04 23:36:40.023194"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "birds" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "duck"], ["created_at", "2016-12-04 23:36:40.024715"], ["updated_at", "2016-12-04 23:36:40.024715"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mBird Load (0.1ms)[0m  [1mSELECT  "birds".* FROM "birds" WHERE "birds"."name" = ? LIMIT 1[0m  [["name", "wigeon"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "pins" ("name", "bird_id", "locationX", "locationY", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "alpha"], ["bird_id", 1], ["locationX", 36.0], ["locationY", -119.0], ["created_at", "2016-12-04 23:36:40.027104"], ["updated_at", "2016-12-04 23:36:40.027104"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mBird Load (0.0ms)[0m  [1mSELECT  "birds".* FROM "birds" WHERE "birds"."name" = ? LIMIT 1[0m  [["name", "duck"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "pins" ("name", "bird_id", "locationX", "locationY", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "beta"], ["bird_id", 2], ["locationX", 39.0], ["locationY", -132.0], ["created_at", "2016-12-04 23:36:40.028979"], ["updated_at", "2016-12-04 23:36:40.028979"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/explore" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Processing by ExploreController#view as HTML
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mBird Load (0.1ms)[0m  SELECT "birds".* FROM "birds"
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 6ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.6ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.2ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"fakeyo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'fakeyo@gmail.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "fakeyo@gmail.com"], ["encrypted_password", "$2a$04$3CTYow2tY5MtcSCxmQ.MfO.LHydQ00BA50Lsl1DDd87lM6fxGBphe"], ["created_at", "2016-12-04 23:36:40.223188"], ["updated_at", "2016-12-04 23:36:40.223188"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-12-04 23:36:40.225274"], ["current_sign_in_at", "2016-12-04 23:36:40.225274"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-12-04 23:36:40.225890"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 9ms (ActiveRecord: 0.9ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Processing by MainpageController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Redirected to http://www.example.com/explore
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+Started GET "/explore" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Processing by ExploreController#view as HTML
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mBird Load (0.1ms)[0m  SELECT "birds".* FROM "birds"
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "birds" ("name", "frequency", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "wigeon"], ["frequency", 10], ["created_at", "2016-12-04 23:36:40.243018"], ["updated_at", "2016-12-04 23:36:40.243018"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "birds" ("name", "frequency", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "duck"], ["frequency", 2], ["created_at", "2016-12-04 23:36:40.244783"], ["updated_at", "2016-12-04 23:36:40.244783"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mBird Load (0.1ms)[0m  [1mSELECT  "birds".* FROM "birds" WHERE "birds"."name" = ? LIMIT 1[0m  [["name", "wigeon"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "pins" ("name", "bird_id", "locationX", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "alpha"], ["bird_id", 1], ["locationX", 36.778259], ["created_at", "2016-12-04 23:36:40.247910"], ["updated_at", "2016-12-04 23:36:40.247910"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mBird Load (0.0ms)[0m  [1mSELECT  "birds".* FROM "birds" WHERE "birds"."name" = ? LIMIT 1[0m  [["name", "duck"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "pins" ("name", "bird_id", "locationX", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "beta"], ["bird_id", 2], ["locationX", 39.124578], ["created_at", "2016-12-04 23:36:40.249794"], ["updated_at", "2016-12-04 23:36:40.249794"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/explore" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Processing by ExploreController#view as HTML
+  [1m[36mPin Load (0.2ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mBird Load (0.2ms)[0m  SELECT "birds".* FROM "birds"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 9ms (Views: 4.2ms | ActiveRecord: 0.5ms)
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.6ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.2ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"asdad", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'asdad' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered users/registrations/new.html.erb within layouts/application (141.9ms)
+Completed 200 OK in 152ms (Views: 146.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (4.0ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.2ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"fakeyo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'fakeyo@gmail.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "fakeyo@gmail.com"], ["encrypted_password", "$2a$04$iIZtuu/7OnthFdlyMH.hEuupIbop9nYvfdaG3gWjxaSn4SFnBQ3nW"], ["created_at", "2016-12-04 23:36:40.653023"], ["updated_at", "2016-12-04 23:36:40.653023"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-12-04 23:36:40.655201"], ["current_sign_in_at", "2016-12-04 23:36:40.655201"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-12-04 23:36:40.655740"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 9ms (ActiveRecord: 0.9ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Processing by MainpageController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Redirected to http://www.example.com/explore
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+Started GET "/explore" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Processing by ExploreController#view as HTML
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mBird Load (0.1ms)[0m  SELECT "birds".* FROM "birds"
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (117.3ms)
+Completed 200 OK in 122ms (Views: 118.8ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.9ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.2ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"fakeyo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'fakeyo@gmail.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "fakeyo@gmail.com"], ["encrypted_password", "$2a$04$HJ6nlZDOILIGsEa9gsNS0.fiL0ZUtRIkqfPKUdpquNDhf.l0i4WZi"], ["created_at", "2016-12-04 23:36:40.839458"], ["updated_at", "2016-12-04 23:36:40.839458"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-12-04 23:36:40.841335"], ["current_sign_in_at", "2016-12-04 23:36:40.841335"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-12-04 23:36:40.841910"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 9ms (ActiveRecord: 1.1ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Processing by MainpageController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Redirected to http://www.example.com/explore
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+Started GET "/explore" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Processing by ExploreController#view as HTML
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mBird Load (0.1ms)[0m  SELECT "birds".* FROM "birds"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+Started GET "/explore/logout" for 127.0.0.1 at 2016-12-04 23:36:40 +0000
+Processing by ExploreController#logout as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 9ms (ActiveRecord: 0.3ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:36:41 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:36:41 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:36:41 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.9ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:36:41 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.5ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:36:41 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:36:41 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:36:41 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (4.1ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:36:41 +0000
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"fakeyo@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "fakeyo@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["current_sign_in_at", "2016-12-04 23:36:41.055345"], ["sign_in_count", 2], ["updated_at", "2016-12-04 23:36:41.056227"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 10ms (ActiveRecord: 0.5ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:36:41 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:36:41 +0000
+Processing by MainpageController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Redirected to http://www.example.com/explore
+Completed 302 Found in 123ms (ActiveRecord: 0.1ms)
+Started GET "/explore" for 127.0.0.1 at 2016-12-04 23:36:41 +0000
+Processing by ExploreController#view as HTML
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mBird Load (0.1ms)[0m  SELECT "birds".* FROM "birds"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  SELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 7ms (Views: 2.4ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:36:41 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (4.6ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:36:41 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:36:41 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:36:41 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (4.1ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:36:41 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.8ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:36:41 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:36:41 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:36:41 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (4.8ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:36:41 +0000
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"fakeyo@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "fakeyo@gmail.com"]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms)
+Processing by Users::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"fakeyo@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  Rendered users/sessions/new.haml within layouts/application (4.1ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:39:38 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (31.4ms)
+Completed 200 OK in 77ms (Views: 47.9ms | ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:39:38 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:39:38 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:39:38 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.9ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-12-04 23:39:38 +0000
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"fakeyo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'fakeyo@gmail.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "fakeyo@gmail.com"], ["encrypted_password", "$2a$04$x4LUXbEcBMb88qw/2CYfOejVRgSWbtZ7.q80emGucvUxNQU41PTjq"], ["created_at", "2016-12-04 23:39:38.493566"], ["updated_at", "2016-12-04 23:39:38.493566"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-12-04 23:39:38.496055"], ["current_sign_in_at", "2016-12-04 23:39:38.496055"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-12-04 23:39:38.496703"], ["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 46ms (ActiveRecord: 1.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:39:38 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:39:38 +0000
+Processing by MainpageController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Redirected to http://www.example.com/explore
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+Started GET "/explore" for 127.0.0.1 at 2016-12-04 23:39:38 +0000
+Processing by ExploreController#view as HTML
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mBird Load (0.1ms)[0m  SELECT "birds".* FROM "birds"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (15.1ms)
+Completed 200 OK in 52ms (Views: 20.7ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "birds" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Im so Cool"], ["created_at", "2016-12-04 23:39:38.580766"], ["updated_at", "2016-12-04 23:39:38.580766"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "birds" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Im cooler"], ["created_at", "2016-12-04 23:39:38.582877"], ["updated_at", "2016-12-04 23:39:38.582877"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "birds" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Im cooler"], ["created_at", "2016-12-04 23:39:38.584285"], ["updated_at", "2016-12-04 23:39:38.584285"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "birds" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Coolest"], ["created_at", "2016-12-04 23:39:38.585687"], ["updated_at", "2016-12-04 23:39:38.585687"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "birds" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Zeus"], ["created_at", "2016-12-04 23:39:38.587545"], ["updated_at", "2016-12-04 23:39:38.587545"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/explore" for 127.0.0.1 at 2016-12-04 23:39:38 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mPin Load (0.1ms)[0m  SELECT "pins".* FROM "pins"
+  [1m[36mBird Load (0.1ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 7ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+Started GET "/explore?search=Im+cooler" for 127.0.0.1 at 2016-12-04 23:39:38 +0000
+Processing by ExploreController#view as HTML
+  Parameters: {"search"=>"Im cooler"}
+  [1m[35mBird Load (0.1ms)[0m  SELECT  "birds".* FROM "birds" WHERE (name LIKE '%Im cooler%')  ORDER BY "birds"."id" ASC LIMIT 1
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins" WHERE "pins"."bird_id" = ?[0m  [["bird_id", 2]]
+  [1m[35mBird Load (0.1ms)[0m  SELECT "birds".* FROM "birds"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 8ms (Views: 3.2ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (10.0ms)[0m  DELETE FROM "birds";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'birds';
+  [1m[36m (6.8ms)[0m  [1mDELETE FROM "birds_wishlists";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'birds_wishlists';[0m
+  [1m[35m (6.9ms)[0m  DELETE FROM "pins";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'pins';
+  [1m[36m (9.0ms)[0m  [1mDELETE FROM "users";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (7.6ms)[0m  DELETE FROM "wishlists";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'wishlists';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (4.1ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (5.1ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"fakeyo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'fakeyo@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "fakeyo@gmail.com"], ["encrypted_password", "$2a$04$WXja1u3Qn1CGLRj4qh5k7ecLK9iz.pICcfaP47Xa2M0c4ttU4v7O2"], ["created_at", "2016-12-04 23:39:39.221960"], ["updated_at", "2016-12-04 23:39:39.221960"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-12-04 23:39:39.224143"], ["current_sign_in_at", "2016-12-04 23:39:39.224143"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-12-04 23:39:39.224691"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 10ms (ActiveRecord: 0.9ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by MainpageController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Redirected to http://www.example.com/explore
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+Started GET "/explore" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mPin Load (0.1ms)[0m  SELECT "pins".* FROM "pins"
+  [1m[36mBird Load (0.1ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "birds" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "wigeon"], ["created_at", "2016-12-04 23:39:39.244683"], ["updated_at", "2016-12-04 23:39:39.244683"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "birds" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "duck"], ["created_at", "2016-12-04 23:39:39.246638"], ["updated_at", "2016-12-04 23:39:39.246638"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mBird Load (0.2ms)[0m  SELECT  "birds".* FROM "birds" WHERE "birds"."name" = ? LIMIT 1  [["name", "wigeon"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pins" ("name", "bird_id", "locationX", "locationY", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "alpha"], ["bird_id", 1], ["locationX", 36.0], ["locationY", -119.0], ["created_at", "2016-12-04 23:39:39.261535"], ["updated_at", "2016-12-04 23:39:39.261535"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mBird Load (0.1ms)[0m  SELECT  "birds".* FROM "birds" WHERE "birds"."name" = ? LIMIT 1  [["name", "duck"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "pins" ("name", "bird_id", "locationX", "locationY", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "beta"], ["bird_id", 2], ["locationX", 39.0], ["locationY", -132.0], ["created_at", "2016-12-04 23:39:39.264451"], ["updated_at", "2016-12-04 23:39:39.264451"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/explore" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mPin Load (0.1ms)[0m  SELECT "pins".* FROM "pins"
+  [1m[36mBird Load (0.1ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 7ms (Views: 3.0ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (4.0ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (5.6ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"fakeyo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'fakeyo@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "fakeyo@gmail.com"], ["encrypted_password", "$2a$04$BiRXt1qpq4xMxatoZyvRQuFvySFaDB5mDi..pnywPlq6302Q5MLki"], ["created_at", "2016-12-04 23:39:39.337297"], ["updated_at", "2016-12-04 23:39:39.337297"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-12-04 23:39:39.339781"], ["current_sign_in_at", "2016-12-04 23:39:39.339781"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-12-04 23:39:39.340589"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 11ms (ActiveRecord: 1.1ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by MainpageController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Redirected to http://www.example.com/explore
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+Started GET "/explore" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mPin Load (0.1ms)[0m  SELECT "pins".* FROM "pins"
+  [1m[36mBird Load (0.1ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "birds" ("name", "frequency", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "wigeon"], ["frequency", 10], ["created_at", "2016-12-04 23:39:39.362997"], ["updated_at", "2016-12-04 23:39:39.362997"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "birds" ("name", "frequency", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "duck"], ["frequency", 2], ["created_at", "2016-12-04 23:39:39.364941"], ["updated_at", "2016-12-04 23:39:39.364941"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mBird Load (0.1ms)[0m  SELECT  "birds".* FROM "birds" WHERE "birds"."name" = ? LIMIT 1  [["name", "wigeon"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "pins" ("name", "bird_id", "locationX", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "alpha"], ["bird_id", 1], ["locationX", 36.778259], ["created_at", "2016-12-04 23:39:39.368758"], ["updated_at", "2016-12-04 23:39:39.368758"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mBird Load (0.1ms)[0m  SELECT  "birds".* FROM "birds" WHERE "birds"."name" = ? LIMIT 1  [["name", "duck"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "pins" ("name", "bird_id", "locationX", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "beta"], ["bird_id", 2], ["locationX", 39.124578], ["created_at", "2016-12-04 23:39:39.371071"], ["updated_at", "2016-12-04 23:39:39.371071"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/explore" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mPin Load (0.1ms)[0m  SELECT "pins".* FROM "pins"
+  [1m[36mBird Load (0.1ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 7ms (Views: 2.6ms | ActiveRecord: 0.4ms)
+  [1m[35mPin Load (0.1ms)[0m  SELECT "pins".* FROM "pins"
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.7ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.8ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"asdad", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'asdad' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered users/registrations/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 24ms (Views: 16.8ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (4.7ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (4.1ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"fakeyo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'fakeyo@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "fakeyo@gmail.com"], ["encrypted_password", "$2a$04$EpJ4BdUSp14g5eLrCTtzNuHo8mGG.eeGx87LLGCETwEGs6UBdxPYS"], ["created_at", "2016-12-04 23:39:39.527232"], ["updated_at", "2016-12-04 23:39:39.527232"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-12-04 23:39:39.529472"], ["current_sign_in_at", "2016-12-04 23:39:39.529472"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-12-04 23:39:39.530151"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 10ms (ActiveRecord: 0.9ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by MainpageController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Redirected to http://www.example.com/explore
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+Started GET "/explore" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mPin Load (0.1ms)[0m  SELECT "pins".* FROM "pins"
+  [1m[36mBird Load (0.1ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 6ms (Views: 2.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (4.2ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (4.0ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"fakeyo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'fakeyo@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "fakeyo@gmail.com"], ["encrypted_password", "$2a$04$266/.lG3qzFimSBdqC5w9.IcVhYjcw1fWdTmIPVq2tb8kbdMKwVDC"], ["created_at", "2016-12-04 23:39:39.608359"], ["updated_at", "2016-12-04 23:39:39.608359"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-12-04 23:39:39.611252"], ["current_sign_in_at", "2016-12-04 23:39:39.611252"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-12-04 23:39:39.612216"], ["id", 1]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 12ms (ActiveRecord: 1.1ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by MainpageController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Redirected to http://www.example.com/explore
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+Started GET "/explore" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mPin Load (0.1ms)[0m  SELECT "pins".* FROM "pins"
+  [1m[36mBird Load (0.2ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 0.4ms)
+Started GET "/explore/logout" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by ExploreController#logout as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (5.2ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (5.0ms)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (5.1ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"fakeyo@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "fakeyo@gmail.com"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2016-12-04 23:39:39.711768"], ["sign_in_count", 2], ["updated_at", "2016-12-04 23:39:39.713225"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 12ms (ActiveRecord: 0.7ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by MainpageController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Redirected to http://www.example.com/explore
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+Started GET "/explore" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mPin Load (0.1ms)[0m  SELECT "pins".* FROM "pins"
+  [1m[36mBird Load (0.1ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 7ms (Views: 2.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (5.6ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (4.5ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.8ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.2ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:39:39 +0000
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"fakeyo@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "fakeyo@gmail.com"]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.1ms)
+Processing by Users::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"fakeyo@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  Rendered users/sessions/new.haml within layouts/application (3.5ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:58:15 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (27.5ms)
+Completed 200 OK in 63ms (Views: 41.4ms | ActiveRecord: 0.5ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:58:15 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:58:15 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:58:15 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.3ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-12-04 23:58:15 +0000
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"fakeyo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'fakeyo@gmail.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "fakeyo@gmail.com"], ["encrypted_password", "$2a$04$FwCBfzprLdneu5tFl5QigeabLZERwGOqemMdfGChzNmbf045eJMRm"], ["created_at", "2016-12-04 23:58:15.820103"], ["updated_at", "2016-12-04 23:58:15.820103"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-12-04 23:58:15.822897"], ["current_sign_in_at", "2016-12-04 23:58:15.822897"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-12-04 23:58:15.823525"], ["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 46ms (ActiveRecord: 1.1ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:58:15 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:58:15 +0000
+Processing by MainpageController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Redirected to http://www.example.com/explore
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+Started GET "/explore" for 127.0.0.1 at 2016-12-04 23:58:15 +0000
+Processing by ExploreController#view as HTML
+  [1m[36mPin Load (0.2ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mBird Load (0.1ms)[0m  SELECT "birds".* FROM "birds"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (12.9ms)
+Completed 200 OK in 50ms (Views: 18.3ms | ActiveRecord: 0.9ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "birds" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Im so Cool"], ["created_at", "2016-12-04 23:58:15.907188"], ["updated_at", "2016-12-04 23:58:15.907188"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "birds" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Im cooler"], ["created_at", "2016-12-04 23:58:15.909237"], ["updated_at", "2016-12-04 23:58:15.909237"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "birds" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Im cooler"], ["created_at", "2016-12-04 23:58:15.910778"], ["updated_at", "2016-12-04 23:58:15.910778"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "birds" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Coolest"], ["created_at", "2016-12-04 23:58:15.912221"], ["updated_at", "2016-12-04 23:58:15.912221"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "birds" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Zeus"], ["created_at", "2016-12-04 23:58:15.913501"], ["updated_at", "2016-12-04 23:58:15.913501"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/explore" for 127.0.0.1 at 2016-12-04 23:58:15 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mPin Load (0.1ms)[0m  SELECT "pins".* FROM "pins"
+  [1m[36mBird Load (0.1ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 7ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+Started GET "/explore?search=Im+cooler" for 127.0.0.1 at 2016-12-04 23:58:15 +0000
+Processing by ExploreController#view as HTML
+  Parameters: {"search"=>"Im cooler"}
+  [1m[35mBird Load (0.1ms)[0m  SELECT  "birds".* FROM "birds" WHERE (name LIKE '%Im cooler%')  ORDER BY "birds"."id" ASC LIMIT 1
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins" WHERE "pins"."bird_id" = ?[0m  [["bird_id", 2]]
+  [1m[35mBird Load (0.1ms)[0m  SELECT "birds".* FROM "birds"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 7ms (Views: 2.2ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:58:15 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.3ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:58:15 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:58:15 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:58:15 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.1ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-12-04 23:58:15 +0000
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"fakeyo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'fakeyo@gmail.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "fakeyo@gmail.com"], ["encrypted_password", "$2a$04$dUUdJzruQ.7gBdxOWf/8LOcKrJq7lvH9bshjQVMZ4ziDrQ7VpKGCW"], ["created_at", "2016-12-04 23:58:15.986841"], ["updated_at", "2016-12-04 23:58:15.986841"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-12-04 23:58:15.988676"], ["current_sign_in_at", "2016-12-04 23:58:15.988676"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-12-04 23:58:15.989215"], ["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 9ms (ActiveRecord: 0.8ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:58:15 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:58:15 +0000
+Processing by MainpageController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Redirected to http://www.example.com/explore
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+Started GET "/explore" for 127.0.0.1 at 2016-12-04 23:58:15 +0000
+Processing by ExploreController#view as HTML
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mBird Load (0.1ms)[0m  SELECT "birds".* FROM "birds"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "birds" ("name", "frequency", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "wigeon"], ["frequency", 10], ["created_at", "2016-12-04 23:58:16.006885"], ["updated_at", "2016-12-04 23:58:16.006885"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "birds" ("name", "frequency", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "duck"], ["frequency", 2], ["created_at", "2016-12-04 23:58:16.008856"], ["updated_at", "2016-12-04 23:58:16.008856"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mBird Load (0.1ms)[0m  [1mSELECT  "birds".* FROM "birds" WHERE "birds"."name" = ? LIMIT 1[0m  [["name", "wigeon"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pins" ("name", "bird_id", "locationX", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "alpha"], ["bird_id", 1], ["locationX", 36.778259], ["created_at", "2016-12-04 23:58:16.021568"], ["updated_at", "2016-12-04 23:58:16.021568"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mBird Load (0.0ms)[0m  [1mSELECT  "birds".* FROM "birds" WHERE "birds"."name" = ? LIMIT 1[0m  [["name", "duck"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "pins" ("name", "bird_id", "locationX", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "beta"], ["bird_id", 2], ["locationX", 39.124578], ["created_at", "2016-12-04 23:58:16.023938"], ["updated_at", "2016-12-04 23:58:16.023938"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/explore" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by ExploreController#view as HTML
+  [1m[36mPin Load (0.2ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mBird Load (0.1ms)[0m  SELECT "birds".* FROM "birds"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 7ms (Views: 2.7ms | ActiveRecord: 0.4ms)
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.2ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.4ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"asdad", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'asdad' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered users/registrations/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 17ms (Views: 11.3ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.9ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.5ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"fakeyo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'fakeyo@gmail.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "fakeyo@gmail.com"], ["encrypted_password", "$2a$04$FV05kPf7BHmMV/yEW1dFoeXQFYd/M8OjuYNfgP4UEl53xt1njINqG"], ["created_at", "2016-12-04 23:58:16.155103"], ["updated_at", "2016-12-04 23:58:16.155103"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-12-04 23:58:16.157261"], ["current_sign_in_at", "2016-12-04 23:58:16.157261"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-12-04 23:58:16.157853"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 10ms (ActiveRecord: 1.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by MainpageController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Redirected to http://www.example.com/explore
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+Started GET "/explore" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by ExploreController#view as HTML
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mBird Load (0.1ms)[0m  SELECT "birds".* FROM "birds"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.6ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (14.6ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"fakeyo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'fakeyo@gmail.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "fakeyo@gmail.com"], ["encrypted_password", "$2a$04$b4seThooXEYdRjmHiJ35IOBLO8GCMtLH6jWM.VZe4j3zhas0Fs8Ey"], ["created_at", "2016-12-04 23:58:16.238366"], ["updated_at", "2016-12-04 23:58:16.238366"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-12-04 23:58:16.240446"], ["current_sign_in_at", "2016-12-04 23:58:16.240446"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-12-04 23:58:16.241068"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 10ms (ActiveRecord: 1.1ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by MainpageController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Redirected to http://www.example.com/explore
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+Started GET "/explore" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by ExploreController#view as HTML
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mBird Load (0.1ms)[0m  SELECT "birds".* FROM "birds"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+Started GET "/explore/logout" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by ExploreController#logout as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.6ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.6ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.5ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"fakeyo@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "fakeyo@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["current_sign_in_at", "2016-12-04 23:58:16.323626"], ["sign_in_count", 2], ["updated_at", "2016-12-04 23:58:16.324486"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 10ms (ActiveRecord: 0.5ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by MainpageController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Redirected to http://www.example.com/explore
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+Started GET "/explore" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by ExploreController#view as HTML
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mBird Load (0.1ms)[0m  SELECT "birds".* FROM "birds"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.9ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.9ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.9ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.8ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-12-04 23:58:16 +0000
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"fakeyo@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "fakeyo@gmail.com"]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms)
+Processing by Users::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"fakeyo@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  Rendered users/sessions/new.haml within layouts/application (3.6ms)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-05 00:05:00 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (25.6ms)
+Completed 200 OK in 63ms (Views: 38.1ms | ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-12-05 00:05:00 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-05 00:05:00 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-05 00:05:00 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.1ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-12-05 00:05:00 +0000
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"fakeyo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'fakeyo@gmail.com' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "fakeyo@gmail.com"], ["encrypted_password", "$2a$04$s6hM/A2VLYZscX9sXPjJte7ge/N81P47zU0woKWT/WAIYBYL03lju"], ["created_at", "2016-12-05 00:05:00.722768"], ["updated_at", "2016-12-05 00:05:00.722768"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-12-05 00:05:00.725603"], ["current_sign_in_at", "2016-12-05 00:05:00.725603"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-12-05 00:05:00.726451"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 48ms (ActiveRecord: 1.4ms)
+Started GET "/" for 127.0.0.1 at 2016-12-05 00:05:00 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-05 00:05:00 +0000
+Processing by MainpageController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Redirected to http://www.example.com/explore
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+Started GET "/explore" for 127.0.0.1 at 2016-12-05 00:05:00 +0000
+Processing by ExploreController#view as HTML
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mBird Load (0.1ms)[0m  SELECT "birds".* FROM "birds"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (12.7ms)
+Completed 200 OK in 51ms (Views: 18.5ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "birds" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Im so Cool"], ["created_at", "2016-12-05 00:05:00.812045"], ["updated_at", "2016-12-05 00:05:00.812045"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "birds" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Im cooler"], ["created_at", "2016-12-05 00:05:00.814113"], ["updated_at", "2016-12-05 00:05:00.814113"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "birds" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Im cooler"], ["created_at", "2016-12-05 00:05:00.815428"], ["updated_at", "2016-12-05 00:05:00.815428"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "birds" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Coolest"], ["created_at", "2016-12-05 00:05:00.816738"], ["updated_at", "2016-12-05 00:05:00.816738"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "birds" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Zeus"], ["created_at", "2016-12-05 00:05:00.818045"], ["updated_at", "2016-12-05 00:05:00.818045"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/explore" for 127.0.0.1 at 2016-12-05 00:05:00 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mPin Load (0.1ms)[0m  SELECT "pins".* FROM "pins"
+  [1m[36mBird Load (0.1ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 7ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+Started GET "/explore?search=Im+cooler" for 127.0.0.1 at 2016-12-05 00:05:00 +0000
+Processing by ExploreController#view as HTML
+  Parameters: {"search"=>"Im cooler"}
+  [1m[35mBird Load (0.2ms)[0m  SELECT  "birds".* FROM "birds" WHERE (name LIKE '%Im cooler%')  ORDER BY "birds"."id" ASC LIMIT 1
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins" WHERE "pins"."bird_id" = ?[0m  [["bird_id", 2]]
+  [1m[35mBird Load (0.1ms)[0m  SELECT "birds".* FROM "birds"
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 7ms (Views: 2.2ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-05 00:05:00 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.5ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-05 00:05:00 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-05 00:05:00 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-05 00:05:00 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.4ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-12-05 00:05:00 +0000
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"fakeyo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'fakeyo@gmail.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "fakeyo@gmail.com"], ["encrypted_password", "$2a$04$v1ICEMn8PSK4cF6eZC8JJeloHBTqVpj2CGQks1vQSpkwRj0N0G3f2"], ["created_at", "2016-12-05 00:05:00.896523"], ["updated_at", "2016-12-05 00:05:00.896523"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-12-05 00:05:00.898764"], ["current_sign_in_at", "2016-12-05 00:05:00.898764"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-12-05 00:05:00.899333"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 10ms (ActiveRecord: 1.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-05 00:05:00 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-05 00:05:00 +0000
+Processing by MainpageController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Redirected to http://www.example.com/explore
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+Started GET "/explore" for 127.0.0.1 at 2016-12-05 00:05:00 +0000
+Processing by ExploreController#view as HTML
+  [1m[36mPin Load (0.3ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mBird Load (0.1ms)[0m  SELECT "birds".* FROM "birds"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "birds" ("name", "frequency", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "wigeon"], ["frequency", 10], ["created_at", "2016-12-05 00:05:00.918373"], ["updated_at", "2016-12-05 00:05:00.918373"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "birds" ("name", "frequency", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "duck"], ["frequency", 2], ["created_at", "2016-12-05 00:05:00.920134"], ["updated_at", "2016-12-05 00:05:00.920134"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mBird Load (0.1ms)[0m  [1mSELECT  "birds".* FROM "birds" WHERE "birds"."name" = ? LIMIT 1[0m  [["name", "wigeon"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pins" ("name", "bird_id", "locationX", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "alpha"], ["bird_id", 1], ["locationX", 36.778259], ["created_at", "2016-12-05 00:05:00.933369"], ["updated_at", "2016-12-05 00:05:00.933369"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mBird Load (0.0ms)[0m  [1mSELECT  "birds".* FROM "birds" WHERE "birds"."name" = ? LIMIT 1[0m  [["name", "duck"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "pins" ("name", "bird_id", "locationX", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "beta"], ["bird_id", 2], ["locationX", 39.124578], ["created_at", "2016-12-05 00:05:00.935824"], ["updated_at", "2016-12-05 00:05:00.935824"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/explore" for 127.0.0.1 at 2016-12-05 00:05:00 +0000
+Processing by ExploreController#view as HTML
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mBird Load (0.1ms)[0m  SELECT "birds".* FROM "birds"
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 7ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-05 00:05:00 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-05 00:05:00 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-05 00:05:00 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-05 00:05:00 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.3ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-12-05 00:05:00 +0000
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"asdad", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'asdad' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered users/registrations/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 17ms (Views: 11.0ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.4ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.0ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"fakeyo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'fakeyo@gmail.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "fakeyo@gmail.com"], ["encrypted_password", "$2a$04$a4BHHFe9Mo.sjdHRgXOeiOCsTPH/aVnk73PcjXU4qFXd/a06qGQlG"], ["created_at", "2016-12-05 00:05:01.061491"], ["updated_at", "2016-12-05 00:05:01.061491"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-12-05 00:05:01.063584"], ["current_sign_in_at", "2016-12-05 00:05:01.063584"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-12-05 00:05:01.064258"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 9ms (ActiveRecord: 0.9ms)
+Started GET "/" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Processing by MainpageController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Redirected to http://www.example.com/explore
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+Started GET "/explore" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Processing by ExploreController#view as HTML
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mBird Load (0.1ms)[0m  SELECT "birds".* FROM "birds"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.3ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (14.5ms)
+Completed 200 OK in 16ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"fakeyo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'fakeyo@gmail.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "fakeyo@gmail.com"], ["encrypted_password", "$2a$04$rigu7.GGqaq1Eq39nM8JeumajRF0KjRrs/hH9jE5sASiyEY00KhrG"], ["created_at", "2016-12-05 00:05:01.138803"], ["updated_at", "2016-12-05 00:05:01.138803"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-12-05 00:05:01.140723"], ["current_sign_in_at", "2016-12-05 00:05:01.140723"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-12-05 00:05:01.141353"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 9ms (ActiveRecord: 0.9ms)
+Started GET "/" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Processing by MainpageController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Redirected to http://www.example.com/explore
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+Started GET "/explore" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Processing by ExploreController#view as HTML
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mBird Load (0.1ms)[0m  SELECT "birds".* FROM "birds"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+Started GET "/explore/logout" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Processing by ExploreController#logout as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+Started GET "/" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.5ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.3ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.4ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"fakeyo@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "fakeyo@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["current_sign_in_at", "2016-12-05 00:05:01.219542"], ["sign_in_count", 2], ["updated_at", "2016-12-05 00:05:01.220413"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 10ms (ActiveRecord: 0.6ms)
+Started GET "/" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Processing by MainpageController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Redirected to http://www.example.com/explore
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+Started GET "/explore" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Processing by ExploreController#view as HTML
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mBird Load (0.1ms)[0m  SELECT "birds".* FROM "birds"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?  [["user_id", 1]]
+  Rendered explore/explore.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.7ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.2ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.6ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Started GET "/main" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Processing by MainpageController#show as HTML
+Redirected to http://www.example.com/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (3.3ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-12-05 00:05:01 +0000
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"fakeyo@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "fakeyo@gmail.com"]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms)
+Processing by Users::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"fakeyo@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  Rendered users/sessions/new.haml within layouts/application (3.8ms)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction

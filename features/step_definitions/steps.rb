@@ -45,14 +45,3 @@ When /^within "(.*)", (?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |scope, field
     fill_in(field, :with => value)
   end
 end
-
-#When /^I am login in with Guest User$/ do
-#  current_user = User.new(:email => "test@test.com", :password => "pwdhhh", :password_confirmation => "pwdhhh")
-#  current_user.save!
-#  Wishlist.create({name: "wishlist1", user_id: current_user.id, bird_ids: [], seens: []})
-#  Wishlist.create({name: "wishlist2", user_id: current_user.id, bird_ids: [], seens: []})
-#end
-
-When /^I set the map at location "(.*), (.*)"$/ do |x, y|
-  map.setCenter({lat: x, lng: y})
-end
