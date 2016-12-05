@@ -7,6 +7,9 @@ before_install:
  #- rvm install binary
 # uncomment and edit the following line if your project needs to run something other than `rake`:
 # script: bundle exec rspec spec
+addons:
+  code_climate:
+    repo_token: 0c57ca2692c2e40f79ce38c238c8792e3cefcccdd34b0ddc6245800cb6f3a2c3
 script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare
