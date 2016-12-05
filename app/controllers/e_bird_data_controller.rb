@@ -33,7 +33,7 @@ class EBirdDataController < ApplicationController
     	radius = params['r']
     	back_days = params['t']
     	sci = params['sci']
-    	url = 'http://ebird.org/ws1.1/data/obs/geo_spp/recent?lng' + lng + '&lat=' + lat + '&dist=' + radius+ '&back=' + back_days + '&fmt=json' + '&sci=' + sci
+    	url = 'http://ebird.org/ws1.1/data/obs/geo_spp/recent?lng=' + lng + '&lat=' + lat + '&dist=' + radius+ '&back=' + back_days + '&fmt=json' + '&sci=' + sci
     	uri = URI(url)
 		response = Net::HTTP.get(uri)
 		render json: response

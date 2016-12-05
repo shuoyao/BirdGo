@@ -32,7 +32,7 @@ function initMap() {
     fetchDataAtLocationAndShow(url)
     }
   );
-  
+  document.extra_data = 0
 }
 
 function fetchDataAtLocationAndShow(url) {
@@ -42,6 +42,19 @@ function fetchDataAtLocationAndShow(url) {
     // "BirdGo.com/eBirdData/NearesrBIrds/lng=xxx&lat=xxx&r=xxx&t=xxx"
     dataType: "json",
     success: markTheseData,
+    error: function() {
+      alert("Search Failed. Please Try again.")
+    }
+  })
+}
+
+function fetchDataAtLocationAndShowWithoutClearingBefore(url) {
+  $.ajax({
+    url: url,
+    method: "GET",
+    // "BirdGo.com/eBirdData/NearesrBIrds/lng=xxx&lat=xxx&r=xxx&t=xxx"
+    dataType: "json",
+    success: markTheseDataWithoutClearingBefore,
     error: function() {
       alert("Search Failed. Please Try again.")
     }
@@ -64,14 +77,93 @@ function markTheseData(data) {
        '<div id="siteNotice">'+
        '</div>' + '<div id="bodyContent">'+
        '<p><b>'
-        + abird['comName']
+        + abird['sciName']
        + '</b></p><p>'
       + "Last Seen: " + abird['obsDt'] + '</p><p>'
        + '</p>'+
-       '<p>Link: <a href=' + 'http://en.wikipedia.org/wiki/' + abird['comName'].replace(" ", "%20") + '>'
+       '<p>Link: <a href=' + 'http://en.wikipedia.org/wiki/' + abird['sciName'].replace(" ", "%20") + '>'
        + 'wikipedia' + '</a>'+
-       '</p>'+ '<button type="button"  onclick="location.href=\'/wishlist/1/add?name=' + abird['comName'] + '\';">Add to Wishlist</button>' +
-       '<button type="button"  onclick="location.href=\'/observed/see?name=' + abird['comName'] + '\';">Yes, I see it</button>' +
+       '</p>'+ '<button type="button"  onclick="location.href=\'/wishlist/1/add?name=' + abird['sciName'] + '\';">Add to Wishlist</button>' +
+       '<button type="button"  onclick="location.href=\'/observed/see?name=' + abird['sciName'] + '\';">Yes, I see it</button>' +
+      '</div>' +
+      '</div>'; 
+
+    marker.contentString = contentString;
+    
+    var infowindow = new google.maps.InfoWindow({
+      content: ''
+    });
+
+    marker.addListener('click', function() {
+      infowindow.setContent(this.contentString);
+      infowindow.open(map, this);
+    });
+  }
+  
+  if (document.extra_data != 0) {
+    for (var i = 0; i < document.extra_data.length; i++) {
+      var abird = document.extra_data[i];
+        var marker = new google.maps.Marker({
+          position: {lat: parseFloat(abird.lat), lng: parseFloat(abird.lng)},
+          map: map,
+          icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+        });
+        map.markerArray.push(marker);
+        
+        contentString = '<div id="content">'+
+         '<div id="siteNotice">'+
+         '</div>' + '<div id="bodyContent">'+
+         '<p><b>'
+          + abird['sciName']
+         + '</b></p><p>'
+        + "Last Seen: " + abird['obsDt'] + '</p><p>'
+         + '</p>'+
+         '<p>Link: <a href=' + 'http://en.wikipedia.org/wiki/' + abird['sciName'].replace(" ", "%20") + '>'
+         + 'wikipedia' + '</a>'+
+         '</p>'+ '<button type="button"  onclick="location.href=\'/wishlist/1/add?name=' + abird['sciName'] + '\';">Add to Wishlist</button>' +
+         '<button type="button"  onclick="location.href=\'/observed/see?name=' + abird['sciName'] + '\';">Yes, I see it</button>' +
+        '</div>' +
+        '</div>';  
+  
+      marker.contentString = contentString;
+      
+      var infowindow = new google.maps.InfoWindow({
+        content: ''
+      });
+  
+      marker.addListener('click', function() {
+        infowindow.setContent(this.contentString);
+        infowindow.open(map, this);
+      });
+    }
+  }
+}
+
+function markTheseDataWithoutClearingBefore(data) {
+  map = document.map
+  console.log(data)
+
+  for (var i = 0; i < data.length; i++) {
+    var abird = data[i];
+      var marker = new google.maps.Marker({
+        position: {lat: parseFloat(abird.lat), lng: parseFloat(abird.lng)},
+        map: map,
+        icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+      });
+      map.markerArray.push(marker);
+      
+      contentString = '<div id="content">'+
+       '<div id="siteNotice">'+
+       '</div>' + '<div id="bodyContent">'+
+       '<p><b>'
+        + abird['sciName']
+       + '</b></p><p>'
+      + "Last Seen: " + abird['obsDt'] + '</p><p>'
+       + '</p>'+
+       '<p>Link: <a href=' + 'http://en.wikipedia.org/wiki/' + abird['sciName'].replace(" ", "%20") + '>'
+       + 'wikipedia' + '</a>'+
+       '</p>'+ '<button type="button"  onclick="location.href=\'/wishlist/1/add?name=' + abird['sciName'] + '\';">Add to Wishlist</button>' +
+       '<button type="button"  onclick="location.href=\'/observed/see?name=' + abird['sciName'] + '\';">Yes, I see it</button>' +
       '</div>' +
       '</div>';  
 
@@ -86,4 +178,6 @@ function markTheseData(data) {
       infowindow.open(map, this);
     });
   }
+  
+  document.extra_data = data
 }

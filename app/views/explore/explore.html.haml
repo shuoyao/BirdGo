@@ -105,10 +105,16 @@
   $(document).ready(function() {
     $('.navbar-form.pull-left').on('submit', function(e) {
         // var data = $("#login_form :input").serializeArray();
-        input = $('.form__input').val()
+        input = $('.form-control').val()
+        center = map.getCenter()
+        lng = center.lng()
+        lat = center.lat()
+        radius = 10
+        time = 30
+        url = "/eBirdData/RecentNearbyObservationsOfASpecies?lng=" + lng + "&lat=" + lat + "&r=" + radius + "&t=" + time + "&sci=" + input
+        fetchDataAtLocationAndShowWithoutClearingBefore(url)
         return false;
     });
   });
-%input{:type =>"hidden", :value =>@birds, :id => "search_result"}
 
 // reference: https://css-tricks.com/functional-css-tabs-revisited/
