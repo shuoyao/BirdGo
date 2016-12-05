@@ -37,20 +37,44 @@
             %li.active
               %a{:href => "#"} Explore
             %li
-              %a{:href => "#"} Profile
-            %li
-              %a{:href => "#"} Wish List
+              %a{ :id => "help_button"} Wish List
             %li
               %a{:href => "#"} Observed
             %li
-              %a{:href => "#"} Log Out
+              %a{:href => "/explore/logout"} Log Out
   
     #map
-    - if flash[:alert] != ""
-      %h3= flash[:alert] 
+    
+    #help
+      table populated with information
+      %table
+        %tr
+          %td hello
+          %td hello
+          
+  
+    
+          
     %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyAZAXAHxRrKlhRSya8IoRc2goYTuUi3ISE&callback=initMap"}
       :cdata
 :javascript
+
+
+  $(document).ready(function() {
+      $("#help_button").click(function() {
+          $("#help").slideToggle(1000, function() {
+              if($("#help_button").val() == "close")
+              {
+                  $("#help_button").val("show table");
+              }
+              else
+              {
+                  $("#help_button").val("close");
+              }
+          });
+      });
+  });
+  
   $(document).ready(function() {
       $('.navbar-form.pull-left').on('submit', function(e) {
           // var data = $("#login_form :input").serializeArray();
@@ -80,3 +104,4 @@
 
 
 // reference: https://css-tricks.com/functional-css-tabs-revisited/
+
