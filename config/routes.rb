@@ -53,8 +53,8 @@ Rails.application.routes.draw do
   post '/explore/search' => 'explore#search'
   get '/explore/logout' => 'explore#logout'
   get '/wishlist/:id/add' => 'wishlist#add'
-  get '/wishlist/:id/see' => 'wishlist#see'
   get '/wishlist/:id/remove' => 'wishlist#remove'
+  get '/observed/see' => 'observed#see'
 
   get '/main', to: 'mainpage#show', as: 'mainpage'
   devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations' }
