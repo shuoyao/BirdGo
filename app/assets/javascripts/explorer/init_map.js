@@ -29,8 +29,8 @@ function initMap() {
        + '</p>'+
        '<p>Link: <a href=' + bird.wiki_link + '>'
        + bird.wiki_link + '</a>'+
-       '</p>'+
-      '</div>'+
+       '</p>'+ '<button type="button"  onclick="location.href=\'/wishlist/1/add?name=' + bird.name + '\';">Click Me!</button>' +
+      '</div>' +
       '</div>';
 
     var infowindow = new google.maps.InfoWindow({
