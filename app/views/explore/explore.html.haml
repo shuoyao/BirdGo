@@ -16,8 +16,7 @@
     / Latest compiled and minified JavaScript
     %script{:crossorigin => "anonymous", :integrity => "sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa", :src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"}
   %body
-    = link_to("Log out", {:action => "logout"}, {:id => "Log out"})
-    
+    // = link_to("Log out", {:action => "logout"}, {:id => "Log out"})
     .navbar.navbar-inverse.navbar-fixed-top
       .container
         .navbar-header
@@ -45,19 +44,7 @@
               %a{:href => "#"} Observed
             %li
               %a{:href => "#"} Log Out
-    %h3 Wishlist Test:
-    - @wishlists.each do |wl|
-      %div
-      - for i in 0..wl.bird_ids.length-1
-        - bird = Bird.find_by_id(wl.bird_ids[i])
-        - seen = wl.seens[i]
-        %td= "#{bird.name} -> #{seen}, "
-    %h1.align
-      .grid
-        %form.search{:form_tag => '/explore/search' }
-          .form__field
-            %input.form__input{:name => "search", :placeholder => "Enter the bird name here...", :type => "search", :text_field_tag => 'search'}/
-            %input.button{:type => "submit", :value => "Search", :submit_tag => 'Search'}/
+  
     #map
     - if flash[:alert] != ""
       %h3= flash[:alert] 
@@ -117,22 +104,6 @@
       :cdata
       
       
-  .tabs
-    .tab
-      %input#tab-1{:checked => "checked", :name => "tab-group-1", :type => "radio"}/
-      %label{:for => "tab-1"} Search
-      .content
-        stuff
-    .tab
-      %input#tab-2{:name => "tab-group-1", :type => "radio"}/
-      %label{:for => "tab-2"} Wishlist
-      .content
-        stuff
-    .tab
-      %input#tab-3{:name => "tab-group-1", :type => "radio"}/
-      %label{:for => "tab-3"} Setting
-      .content
-        stuff
 
 
 %input{:type =>"hidden", :value =>@birds, :id => "search_result"}
