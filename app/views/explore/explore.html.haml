@@ -39,7 +39,7 @@
             %li
               %a{ :id => "help_button"} Wish List
             %li
-              %a{:href => "#"} Observed
+              %a{:id => "help_button2"} Observed
             %li
               %a{:href => "/explore/logout"} Log Out
   
@@ -47,11 +47,25 @@
 
     
     #help
-      table populated with information
-      %table
+      %table.table
         %tr
-          %td hello
-          %td hello
+          %th Bird Name
+          %th Already Seen?
+        - for i in 0..current_user.wishlists.first().birds.length-1
+          %tr
+            %td=current_user.wishlists.first().birds[i].name
+            -if current_user.wishlists.first().seens[i]
+              %td Yes!
+            -else
+              %td Not yet...
+              
+    #help2
+      %table.table
+        %tr
+          %th Bird Name
+        - for i in 0..current_user.observedlist.birds.length-1
+          %tr
+            %td=current_user.observedlist.birds[i].name
 
     %body{:onload => "initGeolocation();"}
     %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyAZAXAHxRrKlhRSya8IoRc2goYTuUi3ISE&callback=initMap"}
@@ -65,10 +79,24 @@
               if($("#help_button").val() == "close")
               {
                   $("#help_button").val("show table");
+                  $("#help_button2").val("close");
               }
               else
               {
                   $("#help_button").val("close");
+              }
+          });
+      });
+      $("#help_button2").click(function() {
+          $("#help2").slideToggle(1000, function() {
+              if($("#help_button2").val() == "close")
+              {
+                  $("#help_button2").val("show table");
+                  $("#help_button").val("close");
+              }
+              else
+              {
+                  $("#help_button2").val("close");
               }
           });
       });

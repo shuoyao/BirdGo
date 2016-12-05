@@ -64,14 +64,14 @@ function markTheseData(data) {
        '<div id="siteNotice">'+
        '</div>' + '<div id="bodyContent">'+
        '<p><b>'
-        + abird['sci-name']
+        + abird['comName']
        + '</b></p><p>'
-      + "Last Seen: " + abird['obs-dt'] + '</p><p>'
+      + "Last Seen: " + abird['obsDt'] + '</p><p>'
        + '</p>'+
-       '<p>Link: <a href=' + 'bird.wiki_link' + '>'
-       + 'bird.wiki_link' + '</a>'+
-       '</p>'+ '<button type="button"  onclick="location.href=\'/wishlist/1/add?name=' + abird['sci-name'] + '\';">Add to Wishlist</button>' +
-       '<button type="button"  onclick="location.href=\'/observed/see?name=' + abird['sci-name'] + '\';">Yes, I see it</button>' +
+       '<p>Link: <a href=' + 'http://en.wikipedia.org/wiki/' + abird['comName'].replace(" ", "%20") + '>'
+       + 'wikipedia' + '</a>'+
+       '</p>'+ '<button type="button"  onclick="location.href=\'/wishlist/1/add?name=' + abird['comName'] + '\';">Add to Wishlist</button>' +
+       '<button type="button"  onclick="location.href=\'/observed/see?name=' + abird['comName'] + '\';">Yes, I see it</button>' +
       '</div>' +
       '</div>';  
 
