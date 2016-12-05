@@ -13,8 +13,10 @@ function initGeolocation()
 
 function success(position)
 {
-    document.getElementById('long').value = position.coords.longitude;
-    document.getElementById('lat').value = position.coords.latitude
+    document.lng = position.coords.longitude;
+    document.lat = position.coords.latitude;
+    document.geoReady = true;
+    initMap();
 }
 
 function fail()
