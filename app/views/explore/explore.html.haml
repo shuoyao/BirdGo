@@ -47,36 +47,18 @@
   
     #map
     - if flash[:alert] != ""
-      %h3= flash[:alert] 
+      %h3= flash[:alert]
+    %body{:onload => "initGeolocation();"}
     %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyAZAXAHxRrKlhRSya8IoRc2goYTuUi3ISE&callback=initMap"}
       :cdata
 :javascript
   $(document).ready(function() {
-      $('.navbar-form.pull-left').on('submit', function(e) {
-          // var data = $("#login_form :input").serializeArray();
-          input = input = $('.form__input').val()
-          long = $('#long').val()
-          lat = $('#lat').val()
-          radius = 10
-          time = 30
-          url = "/eBirdData/NearestBirds?lng=" + long + "&lat=" + lat + "&r=" + radius + "&t=" + time
-          $.ajax({
-          	url: url,
-          	method: "GET",
-          	// "BirdGo.com/eBirdData/NearesrBIrds/lng=xxx&lat=xxx&r=xxx&t=xxx"
-          	dataType: "json",
-          	success: data_handler,
-          	error: function() {
-          	}
-          })
-          return false;
-      });
+    $('.navbar-form.pull-left').on('submit', function(e) {
+        // var data = $("#login_form :input").serializeArray();
+        input = $('.form__input').val()
+        return false;
+    });
   });
 %input{:type =>"hidden", :value =>@birds, :id => "search_result"}
-
-%body{:onload => "initGeolocation();"}
-  %input#long{:name => "long", :type =>"text", :value => ""}/
-  %input#lat{:name => "lat", :type =>"text", :value => ""}/
-
 
 // reference: https://css-tricks.com/functional-css-tabs-revisited/
