@@ -39,7 +39,9 @@ ActiveRecord::Schema.define(version: 20161205010803) do
   add_index "birds_wishlists", ["wishlist_id"], name: "index_birds_wishlists_on_wishlist_id"
 
   create_table "observedlists", force: :cascade do |t|
-    t.integer "user_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "pins", force: :cascade do |t|
