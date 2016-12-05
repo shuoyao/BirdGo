@@ -1981,3 +1981,171 @@ ActionController::RoutingError (No route matches [GET] "/fonts/bootstrap/glyphic
   Rendered explore/explore.html.haml within layouts/application (156.2ms)
 Completed 200 OK in 655ms (Views: 601.1ms | ActiveRecord: 2.3ms)
 >>>>>>> 75da5629845e4caa8edb5f52cbe6da4e046f570d
+
+
+Started GET "/" for 136.152.142.141 at 2016-12-05 01:01:09 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/main" for 136.152.142.141 at 2016-12-05 01:01:09 +0000
+Processing by MainpageController#show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Redirected to https://cs-169-fall-2016-capur.c9users.io/users/sign_in
+Completed 302 Found in 32ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users/sign_in" for 136.152.142.141 at 2016-12-05 01:01:09 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.haml within layouts/application (40.0ms)
+Completed 200 OK in 13447ms (Views: 13433.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/explore.self-113af9b3bec267c7b6bff6982ef89552f1eb5f9525dee4aaae6781e3f04f0df9.css?body=1" for 136.152.142.141 at 2016-12-05 01:01:23 +0000
+
+
+Started GET "/assets/main.self-d19a88b125b955017ab8e203dd0c0b7f5146b5d7913e1ef781591ab6326cffbd.css?body=1" for 136.152.142.141 at 2016-12-05 01:01:23 +0000
+
+
+Started GET "/assets/explorer/initGeolocation.self-960061cdf999fca12db4d1c71a7e3e2864e71d5666f99de10c1697bda9ff7a9b.js?body=1" for 136.152.142.141 at 2016-12-05 01:01:23 +0000
+
+
+Started GET "/assets/explorer/init_map.self-4d770b5e998a8c55db0f447a5dc4700249867ef8df746bf1d3a9a334cc57eeca.js?body=1" for 136.152.142.141 at 2016-12-05 01:01:23 +0000
+
+
+Started GET "/assets/explorer/data_handler.self-4a2f7a652f1f2069403288e3253004c07a9d680ee05405d105b252404e297909.js?body=1" for 136.152.142.141 at 2016-12-05 01:01:23 +0000
+
+
+Started POST "/users/sign_in" for 136.152.142.141 at 2016-12-05 01:01:26 +0000
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WIWYJMKHvfHqAv4FeG+7ql3GTcLRXLA5n3gdedrbP5KEI4aJsIBT8jP6mk6Z05pEyMOqKex+aX/y2ThCJFwdxw==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (4.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "test@test.com"]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (3.2ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-12-05 00:09:01.167260"], ["current_sign_in_at", "2016-12-05 01:01:26.400064"], ["current_sign_in_ip", "136.152.142.141"], ["sign_in_count", 3], ["updated_at", "2016-12-05 01:01:26.401794"], ["id", 1]]
+  [1m[35m (13.3ms)[0m  commit transaction
+Redirected to https://cs-169-fall-2016-capur.c9users.io/
+Completed 302 Found in 305ms (ActiveRecord: 21.6ms)
+
+
+Started GET "/" for 136.152.142.141 at 2016-12-05 01:01:26 +0000
+
+
+Started GET "/main" for 136.152.142.141 at 2016-12-05 01:01:26 +0000
+Processing by MainpageController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Redirected to https://cs-169-fall-2016-capur.c9users.io/explore
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/explore" for 136.152.142.141 at 2016-12-05 01:01:26 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mPin Load (0.4ms)[0m  SELECT "pins".* FROM "pins"
+  [1m[36mBird Load (0.8ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mWishlist Load (0.3ms)[0m  SELECT  "wishlists".* FROM "wishlists" WHERE "wishlists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mWishlist Load (0.2ms)[0m  [1mSELECT  "wishlists".* FROM "wishlists" WHERE "wishlists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered explore/explore.html.haml within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 119ms (ActiveRecord: 3.6ms)
+
+ActionView::Template::Error (Illegal nesting: nesting within plain text is illegal.):
+    50:       %h3= flash[:alert] 
+    51:     :javascript
+    52:   $(document).ready(function() {
+    53:       $('.search').on('submit', function(e) {
+    54:           // var data = $("#login_form :input").serializeArray();
+    55:           input = input = $('.form__input').val()
+    56:           long = $('#long').val()
+  app/views/explore/explore.html.haml:53
+  app/controllers/explore_controller.rb:27:in `view'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (113.1ms)
+
+
+Started GET "/explore" for 136.152.142.141 at 2016-12-05 01:01:47 +0000
+Processing by ExploreController#view as HTML
+  [1m[35mPin Load (0.5ms)[0m  SELECT "pins".* FROM "pins"
+  [1m[36mBird Load (0.3ms)[0m  [1mSELECT "birds".* FROM "birds"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mWishlist Load (0.1ms)[0m  SELECT  "wishlists".* FROM "wishlists" WHERE "wishlists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mWishlist Load (0.1ms)[0m  [1mSELECT  "wishlists".* FROM "wishlists" WHERE "wishlists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered explore/explore.html.haml within layouts/application (25.3ms)
+Completed 200 OK in 193ms (Views: 180.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 136.152.142.141 at 2016-12-05 01:03:42 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/main" for 136.152.142.141 at 2016-12-05 01:03:42 +0000
+Processing by MainpageController#show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Redirected to https://cs-169-fall-2016-capur.c9users.io/explore
+Completed 302 Found in 41ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/explore" for 136.152.142.141 at 2016-12-05 01:03:43 +0000
+Processing by ExploreController#view as HTML
+  [1m[36mPin Load (0.4ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mBird Load (0.3ms)[0m  SELECT "birds".* FROM "birds"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?  [["user_id", 1]]
+  [1m[36mWishlist Load (0.2ms)[0m  [1mSELECT  "wishlists".* FROM "wishlists" WHERE "wishlists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mWishlist Load (0.1ms)[0m  SELECT  "wishlists".* FROM "wishlists" WHERE "wishlists"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered explore/explore.html.haml within layouts/application (19.1ms)
+Completed 200 OK in 571ms (Views: 503.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/explore" for 136.152.142.141 at 2016-12-05 01:07:31 +0000
+Processing by ExploreController#view as HTML
+  [1m[36mPin Load (0.5ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mBird Load (0.3ms)[0m  SELECT "birds".* FROM "birds"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT "wishlists".id FROM "wishlists" WHERE "wishlists"."user_id" = ?  [["user_id", 1]]
+  [1m[36mWishlist Load (0.1ms)[0m  [1mSELECT  "wishlists".* FROM "wishlists" WHERE "wishlists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mWishlist Load (0.1ms)[0m  SELECT  "wishlists".* FROM "wishlists" WHERE "wishlists"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered explore/explore.html.haml within layouts/application (6.6ms)
+Completed 200 OK in 141ms (Views: 126.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/explore.self-113af9b3bec267c7b6bff6982ef89552f1eb5f9525dee4aaae6781e3f04f0df9.css?body=1" for 136.152.142.141 at 2016-12-05 01:07:31 +0000
+
+
+Started GET "/assets/main.self-d19a88b125b955017ab8e203dd0c0b7f5146b5d7913e1ef781591ab6326cffbd.css?body=1" for 136.152.142.141 at 2016-12-05 01:07:31 +0000
+
+
+Started GET "/assets/users/sessions/new.html.self-4e93ebf1edd334c2a2bf171d50ad70374f05498496aee6c934f8e37fc3f10317.css?body=1" for 136.152.142.141 at 2016-12-05 01:07:31 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 136.152.142.141 at 2016-12-05 01:07:31 +0000
+
+
+Started GET "/assets/explorer/init_map.self-71c62340fc81302fd16a78071adca85e5131df797f9dfc1c73944d6196d026b7.js?body=1" for 136.152.142.141 at 2016-12-05 01:07:31 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 136.152.142.141 at 2016-12-05 01:07:31 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 136.152.142.141 at 2016-12-05 01:07:31 +0000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 136.152.142.141 at 2016-12-05 01:07:31 +0000
+
+
+Started GET "/assets/Ebird_Toolbox.self-16e90024e206d725ed0467b58408570e7fcdba21568f505d2a6d4650360f1f44.js?body=1" for 136.152.142.141 at 2016-12-05 01:07:31 +0000
+
+
+Started GET "/assets/explorer/data_handler.self-4a2f7a652f1f2069403288e3253004c07a9d680ee05405d105b252404e297909.js?body=1" for 136.152.142.141 at 2016-12-05 01:07:31 +0000
+
+
+Started GET "/assets/explorer/initGeolocation.self-960061cdf999fca12db4d1c71a7e3e2864e71d5666f99de10c1697bda9ff7a9b.js?body=1" for 136.152.142.141 at 2016-12-05 01:07:31 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 136.152.142.141 at 2016-12-05 01:07:31 +0000
+
+
+Started GET "/assets/users/sessions/new.html.self-c6807773375bede06657a86efb1d33d04c679fdfc0ef774e800bdf6c6a9db6a3.js?body=1" for 136.152.142.141 at 2016-12-05 01:07:31 +0000

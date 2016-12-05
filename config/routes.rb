@@ -56,4 +56,8 @@ Rails.application.routes.draw do
   get '/main', to: 'mainpage#show', as: 'mainpage'
   devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations' }
   root :to => redirect('/main')
+  
+  resources :cars, :except => [:index, :new, :create, :show, :edit, :update, :destroy] do
+    
+  end
 end

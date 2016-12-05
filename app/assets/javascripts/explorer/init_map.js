@@ -1,4 +1,4 @@
-$('#search_result').reset();
+$('#search_result').html("");
 function initMap() {
   var birds = [];
   for (var i = 0; i < gon.pins.length; i++) {
