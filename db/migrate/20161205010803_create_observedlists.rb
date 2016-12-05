@@ -1,8 +1,6 @@
 class CreateObservedlists < ActiveRecord::Migration
   def change
-    create_table :observedlists do |t|
-
-      t.timestamps null: false
+    change_table :observedlists do |t|
     end
   end
 end
