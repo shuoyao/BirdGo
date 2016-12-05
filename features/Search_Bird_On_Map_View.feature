@@ -24,7 +24,7 @@ Background: birds in database
 Scenario: search for a bird
   When I am on the explore page
   And  I fill in "search" with "Im cooler"
-  And  I press "Search"
+  And  I presses "search"
 #  And  I can see dropdown hint with an entry of "Im so Cool" in it
 #  And  I press "Im so Cool"
   #And I should see "No matching bird found!"

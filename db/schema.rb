@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161102063052) do
+ActiveRecord::Schema.define(version: 20161205010803) do
 
   create_table "birds", force: :cascade do |t|
     t.string   "name"
@@ -22,6 +22,14 @@ ActiveRecord::Schema.define(version: 20161102063052) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "birds_observedlists", id: false, force: :cascade do |t|
+    t.integer "observedlist_id"
+    t.integer "bird_id"
+  end
+
+  add_index "birds_observedlists", ["bird_id"], name: "index_birds_observedlists_on_bird_id"
+  add_index "birds_observedlists", ["observedlist_id"], name: "index_birds_observedlists_on_observedlist_id"
+
   create_table "birds_wishlists", id: false, force: :cascade do |t|
     t.integer "wishlist_id"
     t.integer "bird_id"
@@ -29,6 +37,10 @@ ActiveRecord::Schema.define(version: 20161102063052) do
 
   add_index "birds_wishlists", ["bird_id"], name: "index_birds_wishlists_on_bird_id"
   add_index "birds_wishlists", ["wishlist_id"], name: "index_birds_wishlists_on_wishlist_id"
+
+  create_table "observedlists", force: :cascade do |t|
+    t.integer "user_id"
+  end
 
   create_table "pins", force: :cascade do |t|
     t.string   "name"

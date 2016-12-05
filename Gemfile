@@ -52,5 +52,6 @@ gem 'rake', '>=11.3.0'
 
 # enable CodeClimate test coverage
 group :test do
+  gem "simplecov"
   gem 'codeclimate-test-reporter', require: nil
 end
