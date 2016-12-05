@@ -252,6 +252,7 @@ DEPENDENCIES
   rubygems-bundler
   sass-rails (~> 5.0.3)
   selenium-webdriver
+  simplecov
   sqlite3
   turbolinks
   uglifier (>= 2.7.1)
