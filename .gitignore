@@ -7,6 +7,7 @@
 *.rbc
 capybara-*.html
 .rspec
+/BirdGo
 /log
 /tmp
 /db/*.sqlite3

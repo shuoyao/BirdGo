@@ -43,80 +43,40 @@
             %li
               %a{:href => "#"} Observed
             %li
-              %a{:href => "explore/logout" } Log Out
+              %a{:href => "#"} Log Out
   
     #map
     - if flash[:alert] != ""
       %h3= flash[:alert] 
-    :javascript
-      $('#search_result').reset();
-      function initMap() {
-        var birds = [];
-        for (var i = 0; i < gon.pins.length; i++) {
-          bird = gon.pins[i];
-          birds.push({lat: bird.locationX, lng: bird.locationY});
-        }
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: birds[0]
-        });
-        
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {lat: position.coords.latitude, lng: position.coords.longitude};
-            map.panTo(pos);
-          });
-        } else {
-          alert("Location requisition banned by browser!");
-        }
-        
-        for (var i = 0; i < birds.length; i++) {
-          pin = gon.pins[i];
-          var pin1 = birds[i];
-          bird = null;
-          for (var j = 0; j < gon.birds.length; j++) {
-            if (gon.birds[j].id == pin.bird_id) {
-              bird = gon.birds[j];
-            }
-          }
-          contentString = '<div id="content">'+
-             '<div id="siteNotice">'+
-             '</div>' + '<div id="bodyContent">'+
-             '<p><b>'
-              + bird.name
-             + '</b></p><p>'
-            + "Last Seen: " + bird.last_seen + '</p><p>'
-            + "Total Seen: " + bird.frequency
-             + '</p>'+
-             '<p>Link: <a href=' + bird.wiki_link + '>'
-             + bird.wiki_link + '</a>'+
-             '</p>'+
-            '</div>'+
-            '</div>';
-
-          var infowindow = new google.maps.InfoWindow({
-            content: 'bullshit'
-          });
-          var marker = new google.maps.Marker({
-            position: pin1,
-            map: map
-          });
-          
-          marker.contentString = contentString;
-
-          marker.addListener('click', function() {
-            infowindow.setContent(this.contentString);
-            infowindow.open(map, this);
-          });
-        }
-      }
     %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyAZAXAHxRrKlhRSya8IoRc2goYTuUi3ISE&callback=initMap"}
       :cdata
-      
-      
-
-
+:javascript
+  $(document).ready(function() {
+      $('.navbar-form.pull-left').on('submit', function(e) {
+          // var data = $("#login_form :input").serializeArray();
+          input = input = $('.form__input').val()
+          long = $('#long').val()
+          lat = $('#lat').val()
+          radius = 10
+          time = 30
+          url = "/eBirdData/NearestBirds?lng=" + long + "&lat=" + lat + "&r=" + radius + "&t=" + time
+          $.ajax({
+          	url: url,
+          	method: "GET",
+          	// "BirdGo.com/eBirdData/NearesrBIrds/lng=xxx&lat=xxx&r=xxx&t=xxx"
+          	dataType: "json",
+          	success: data_handler,
+          	error: function() {
+          	}
+          })
+          return false;
+      });
+  });
 %input{:type =>"hidden", :value =>@birds, :id => "search_result"}
+
+%body{:onload => "initGeolocation();"}
+  %input#long{:name => "long", :type =>"text", :value => ""}/
+  %input#lat{:name => "lat", :type =>"text", :value => ""}/
 
 
 // reference: https://css-tricks.com/functional-css-tabs-revisited/

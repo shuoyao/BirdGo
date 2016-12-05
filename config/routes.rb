@@ -59,4 +59,9 @@ Rails.application.routes.draw do
   get '/main', to: 'mainpage#show', as: 'mainpage'
   devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations' }
   root :to => redirect('/main')
+  
+  # Ninja way to do static routing, reference: http://jerodsanto.net/2013/01/dynamic-routes-to-static-pages-on-rails/
+  EBirdDataController.action_methods.each do |action|
+    get "/eBirdData/#{action}/", to: "e_bird_data##{action}", as: "eBirdData_#{action}"
+  end
 end
