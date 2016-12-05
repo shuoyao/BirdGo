@@ -29,7 +29,8 @@ function initMap() {
        + '</p>'+
        '<p>Link: <a href=' + bird.wiki_link + '>'
        + bird.wiki_link + '</a>'+
-       '</p>'+ '<button type="button"  onclick="location.href=\'/wishlist/1/add?name=' + bird.name + '\';">Click Me!</button>' +
+       '</p>'+ '<button type="button"  onclick="location.href=\'/wishlist/1/add?name=' + bird.name + '\';">Add to Wishlist</button>' +
+       '<button type="button"  onclick="location.href=\'/observed/see?name=' + bird.name + '\';">Already Observed</button>' +
       '</div>' +
       '</div>';
 
