@@ -10,10 +10,10 @@ birds = Bird.create([{name: 'Canada goose', wiki_link: "https://en.wikipedia.org
                      {name: 'Western gull', wiki_link: "https://en.wikipedia.org/wiki/Western_gull", frequency: 20, last_seen: Date.new(2016, 11, 1)},
                      {name: 'Barn owl', wiki_link: "https://en.wikipedia.org/wiki/Barn_owl", frequency: 30, last_seen: Date.new(2015, 1, 1)}])
 birds.each do |bird|
-    pins = Pin.create([{name: bird.name + ' 1', bird_id: bird.id, locationX: Random.rand(100.0), locationY: Random.rand(50.0)},
-                      {name: bird.name + ' 2', bird_id: bird.id, locationX: Random.rand(100.0), locationY: Random.rand(50.0)},
-                      {name: bird.name + ' 3', bird_id: bird.id, locationX: Random.rand(100.0), locationY: Random.rand(50.0)},
-                      {name: bird.name + ' 4', bird_id: bird.id, locationX: Random.rand(100.0), locationY: Random.rand(50.0)}])
+    pins = Pin.create([{name: bird.name + ' 1', bird_id: bird.id, locationX: Random.rand(60.0), locationY: Random.rand(50.0)+80},
+                      {name: bird.name + ' 2', bird_id: bird.id, locationX: Random.rand(60.0), locationY: Random.rand(50.0)+80},
+                      {name: bird.name + ' 3', bird_id: bird.id, locationX: Random.rand(60.0), locationY: Random.rand(50.0)+80},
+                      {name: bird.name + ' 4', bird_id: bird.id, locationX: Random.rand(60.0), locationY: Random.rand(50.0)+80}])
 end
 user = User.new(:email => "test@test.com", :password => "pwdhhh", :password_confirmation => "pwdhhh")
 user.save!
