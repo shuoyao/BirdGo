@@ -9,6 +9,7 @@ function initMap() {
     zoom: 4,
     center: birds[0]
   });
+  
   for (var i = 0; i < birds.length; i++) {
     pin = gon.pins[i];
     var pin1 = birds[i];
@@ -48,4 +49,10 @@ function initMap() {
       infowindow.open(map, this);
     });
   }
+  
+  map.addListener('dragend', function() {
+    alert("yay");
+  });
+  
+  document.map = map;
 }
