@@ -29,7 +29,7 @@ class ExploreController < ApplicationController
    	
    	def logout
    	    sign_out current_user
-   	    redirect_to "/"
+   	    redirect_to "/users/sign_in" 
    	end
 end
 

@@ -13,7 +13,6 @@ function initGeolocation()
 
 function success(position)
 {
-
     document.getElementById('long').value = position.coords.longitude;
     document.getElementById('lat').value = position.coords.latitude
 }
@@ -21,4 +20,5 @@ function success(position)
 function fail()
 {
    // Could not obtain location
+   alert('Unable to determine where u r lol, plz tell us if you want to know the birds around you')
 }

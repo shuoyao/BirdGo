@@ -48,23 +48,24 @@
     #map
     - if flash[:alert] != ""
       %h3= flash[:alert] 
+    %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyAZAXAHxRrKlhRSya8IoRc2goYTuUi3ISE&callback=initMap"}
+      :cdata
 :javascript
   $(document).ready(function() {
-      $('.search').on('submit', function(e) {
+      $('.navbar-form.pull-left').on('submit', function(e) {
           // var data = $("#login_form :input").serializeArray();
           input = input = $('.form__input').val()
           long = $('#long').val()
           lat = $('#lat').val()
-          radius = 10.0
+          radius = 10
           time = 30
-          url = window.location.hostname + "/eBirdData/NearestBirds/lng=" + long + "&lat=" + lat + "&r=" + radius + "&t=" + time
-          //alert(window.location.protocol + 'asd')
-          //alert(url)
+          url = "/eBirdData/NearestBirds?lng=" + long + "&lat=" + lat + "&r=" + radius + "&t=" + time
           $.ajax({
-          	url: url
-          	// "BIrdGo.com/eBirdData/NearesrBIrds/lng=xxx&lat=xxx&r=xxx&t=xxx"
+          	url: url,
+          	method: "GET",
+          	// "BirdGo.com/eBirdData/NearesrBIrds/lng=xxx&lat=xxx&r=xxx&t=xxx"
           	dataType: "json",
-          	success: data_handler()
+          	success: data_handler,
           	error: function() {
           	}
           })
